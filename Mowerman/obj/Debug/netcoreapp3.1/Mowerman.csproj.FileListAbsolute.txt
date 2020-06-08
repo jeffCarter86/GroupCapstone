@@ -327,7 +327,6 @@ C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\runtimes\w
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.csprojAssemblyReference.cache
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.csproj.CoreCompileInputs.cache
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.MvcApplicationPartsAssemblyInfo.cache
