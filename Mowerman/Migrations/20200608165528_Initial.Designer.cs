@@ -7,11 +7,11 @@ using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Mowerman.Data;
 
-namespace Mowerman.Data.Migrations
+namespace Mowerman.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200608163939_ChangingDataTypeOfExtraMowDay")]
-    partial class ChangingDataTypeOfExtraMowDay
+    [Migration("20200608165528_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -50,22 +50,22 @@ namespace Mowerman.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "38474e37-618e-4798-8065-38185ccfe5c7",
-                            ConcurrencyStamp = "f823cf58-5a91-48c9-b4bd-10c71e36b287",
+                            Id = "6fca6b85-3959-427f-ac1f-3d266a7fcc68",
+                            ConcurrencyStamp = "16c57645-a47c-47e6-83d3-d29004e4f397",
                             Name = "Customer",
                             NormalizedName = "Customer"
                         },
                         new
                         {
-                            Id = "40869d46-d02b-46df-885a-45fb03337580",
-                            ConcurrencyStamp = "cf4a9fb4-2bfd-4b86-bb21-71813cd5928f",
+                            Id = "70a486ff-db25-4fd9-b3fd-0065b1b4b1da",
+                            ConcurrencyStamp = "96d0d2b9-b415-44f0-a836-19b4f0623c22",
                             Name = "Employee",
                             NormalizedName = "Employee"
                         },
                         new
                         {
-                            Id = "c34d7ca9-a22e-4107-ba84-4dadf9bd6615",
-                            ConcurrencyStamp = "44e0e2f6-008a-4918-ae99-9132a1d4748e",
+                            Id = "a89a6411-f1d4-4f20-9e77-6c46ba88a09d",
+                            ConcurrencyStamp = "4707a8a3-8de5-42ac-a2aa-b01a2f80ac12",
                             Name = "Operation",
                             NormalizedName = "Operation"
                         });
