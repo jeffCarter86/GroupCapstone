@@ -35,6 +35,10 @@ namespace Mowerman.Models
         [Required(ErrorMessage = "Zip Code is Required")]
         public string ZipCode { get; set; }
 
+        [Display(Name = "Phone Number")]
+        [Required(ErrorMessage = "Phone Number is Required")]
+        public string PhoneNumber { get; set; }
+
         [Display(Name = "Suspend Services Start Date")]
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
