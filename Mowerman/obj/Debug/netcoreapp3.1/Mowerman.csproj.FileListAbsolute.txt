@@ -371,3 +371,9 @@ C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\staticweba
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.dll
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.pdb
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.genruntimeconfig.cache
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Login.cshtml.g.cs
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Logout.cshtml.g.cs
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\Register.cshtml.g.cs
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\Account\_ViewImports.cshtml.g.cs
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Razor\Areas\Identity\Pages\_ViewImports.cshtml.g.cs
