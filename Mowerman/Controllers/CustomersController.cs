@@ -107,7 +107,7 @@ namespace Mowerman.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,CollectionDay,ExtraCollectionDay,Address,StartDate,EndDate,ZipCode")] Customer customer)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,CollectionDay,ExtraMowDay,Address,StartDate,EndDate,ZipCode,MowDay")] Customer customer)
         {
             if (id != customer.Id)
             {
