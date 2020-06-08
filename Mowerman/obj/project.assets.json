@@ -8957,19 +8957,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\jeff\\.nuget\\packages\\": {}
+    "C:\\Users\\ledze\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\jeff\\Desktop\\school\\week9\\projects\\Mowerman\\Mowerman\\Mowerman.csproj",
+      "projectUniqueName": "C:\\Users\\ledze\\Desktop\\GroupCapstone\\Mowerman\\Mowerman.csproj",
       "projectName": "Mowerman",
-      "projectPath": "C:\\Users\\jeff\\Desktop\\school\\week9\\projects\\Mowerman\\Mowerman\\Mowerman.csproj",
-      "packagesPath": "C:\\Users\\jeff\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\jeff\\Desktop\\school\\week9\\projects\\Mowerman\\Mowerman\\obj\\",
+      "projectPath": "C:\\Users\\ledze\\Desktop\\GroupCapstone\\Mowerman\\Mowerman.csproj",
+      "packagesPath": "C:\\Users\\ledze\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ledze\\Desktop\\GroupCapstone\\Mowerman\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jeff\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ledze\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9040,7 +9040,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
