@@ -60,7 +60,7 @@ namespace Mowerman.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,CollectionDay,Address,ZipCode,IdentityUserId,MowDay")] Customer customer)
+        public async Task<IActionResult> Create([Bind("Id,Name,CollectionDay,Address,ZipCode,IdentityUserId,MowDay,State,PhoneNumber")] Customer customer)
         {
             if (ModelState.IsValid)
             {
@@ -107,7 +107,7 @@ namespace Mowerman.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,CollectionDay,ExtraMowDay,Address,StartDate,EndDate,ZipCode,MowDay")] Customer customer)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,CollectionDay,ExtraMowDay,Address,StartDate,EndDate,ZipCode,MowDay,State,PhoneNumber")] Customer customer)
         {
             if (id != customer.Id)
             {
