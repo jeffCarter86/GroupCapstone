@@ -10,7 +10,7 @@ using Mowerman.Data;
 namespace Mowerman.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200608165528_Initial")]
+    [Migration("20200608192933_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -50,22 +50,22 @@ namespace Mowerman.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "6fca6b85-3959-427f-ac1f-3d266a7fcc68",
-                            ConcurrencyStamp = "16c57645-a47c-47e6-83d3-d29004e4f397",
+                            Id = "4b4df7cd-8211-41a0-acc2-f1733feb4aec",
+                            ConcurrencyStamp = "906a5b78-cacf-4df9-89c3-d08db4c63ba0",
                             Name = "Customer",
                             NormalizedName = "Customer"
                         },
                         new
                         {
-                            Id = "70a486ff-db25-4fd9-b3fd-0065b1b4b1da",
-                            ConcurrencyStamp = "96d0d2b9-b415-44f0-a836-19b4f0623c22",
+                            Id = "1398afb5-8429-41cc-9bda-6f7881f39237",
+                            ConcurrencyStamp = "6a4e0e20-f7c4-41ab-8e59-136bcb5c0e9e",
                             Name = "Employee",
                             NormalizedName = "Employee"
                         },
                         new
                         {
-                            Id = "a89a6411-f1d4-4f20-9e77-6c46ba88a09d",
-                            ConcurrencyStamp = "4707a8a3-8de5-42ac-a2aa-b01a2f80ac12",
+                            Id = "74f3d9bc-60c6-4651-b604-bcd0c2351541",
+                            ConcurrencyStamp = "64031fda-2d88-47ca-a149-d4ad3f6bcc32",
                             Name = "Operation",
                             NormalizedName = "Operation"
                         });
@@ -276,11 +276,19 @@ namespace Mowerman.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("ServicesConfirmationDate")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("StartDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ZipCode")
                         .IsRequired()

@@ -48,22 +48,22 @@ namespace Mowerman.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "36270bac-55d9-4d85-ae48-0f2c0acf48c4",
-                            ConcurrencyStamp = "ba9f889c-ad71-4a4f-9ba3-914e7b5db560",
+                            Id = "4b4df7cd-8211-41a0-acc2-f1733feb4aec",
+                            ConcurrencyStamp = "906a5b78-cacf-4df9-89c3-d08db4c63ba0",
                             Name = "Customer",
                             NormalizedName = "Customer"
                         },
                         new
                         {
-                            Id = "7e7918f3-478f-47d5-9145-5faa273d6082",
-                            ConcurrencyStamp = "8daf0799-43e0-490f-8383-8f45d0e7b1a4",
+                            Id = "1398afb5-8429-41cc-9bda-6f7881f39237",
+                            ConcurrencyStamp = "6a4e0e20-f7c4-41ab-8e59-136bcb5c0e9e",
                             Name = "Employee",
                             NormalizedName = "Employee"
                         },
                         new
                         {
-                            Id = "e45271c8-d6c2-4b51-a9b4-6e1bc5932741",
-                            ConcurrencyStamp = "641729dc-4323-4636-bff3-e762b7a4f994",
+                            Id = "74f3d9bc-60c6-4651-b604-bcd0c2351541",
+                            ConcurrencyStamp = "64031fda-2d88-47ca-a149-d4ad3f6bcc32",
                             Name = "Operation",
                             NormalizedName = "Operation"
                         });
