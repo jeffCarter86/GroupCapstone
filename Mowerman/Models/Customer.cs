@@ -26,6 +26,9 @@ namespace Mowerman.Models
         [Display(Name = "Street Address")]
         [Required(ErrorMessage = "Address is Required")]
         public string Address { get; set; }
+        [Display(Name = "State")]
+        [Required(ErrorMessage = "State is Required")]
+        public string State { get; set; }
 
         [Display(Name = "Zip Code")]
         //[RegularExpression(@"^\d{5}(-\d{4})?$", ErrorMessage = "Invalid Zip")]
