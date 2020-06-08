@@ -24,8 +24,15 @@ namespace Mowerman.Controllers
         // GET: Customers
         public async Task<IActionResult> Index()
         {
-            var applicationDbContext = _context.Customers.Include(c => c.IdentityUser);
-            return View(await applicationDbContext.ToListAsync());
+            var customer = _context.Customers.Include(c => c.IdentityUser);
+            if (customer == null)
+            {
+                return View("Create");
+            }
+            else
+            {
+                return View(await customer.ToListAsync());
+            }
         }
 
         // GET: Customers/Details/5
@@ -77,6 +84,7 @@ namespace Mowerman.Controllers
                     customerInDB.Address = customer.Address;
                     customerInDB.ZipCode = customer.ZipCode;
                     customerInDB.MowDay = customer.MowDay;
+                    customerInDB.IdentityUserId = customer.IdentityUserId;
                 }
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Details), new { id = customer.Id.ToString() });
@@ -107,7 +115,7 @@ namespace Mowerman.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,CollectionDay,ExtraMowDay,Address,StartDate,EndDate,ZipCode,MowDay,State,PhoneNumber")] Customer customer)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,CollectionDay,ExtraMowDay,Address,StartDate,EndDate,ZipCode,MowDay,State,PhoneNumber ")] Customer customer)
         {
             if (id != customer.Id)
             {
