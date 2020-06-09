@@ -14,6 +14,7 @@ using Mowerman.Models;
 
 namespace Mowerman.Controllers
 {
+    [Authorize(Roles = "Operation")]
     public class OperationsController : Controller
     {
         // GET: Operations

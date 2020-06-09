@@ -27,21 +27,21 @@ namespace Mowerman.Data
 
             builder.Entity<IdentityRole>()
                 .HasData(
-                new IdentityRole
-                {
-                    Name = "Customer",
-                    NormalizedName = "Customer"
-                },
-                new IdentityRole
-                {
-                    Name = "Employee",
-                    NormalizedName = "Employee"
-                },
-            new IdentityRole
-            {
-                Name = "Operation",
-                NormalizedName = "Operation"
-            });
+                    new IdentityRole
+                    {
+                        Name = "Customer",
+                        NormalizedName = "Customer"
+                    },
+                    new IdentityRole
+                    {
+                        Name = "Employee",
+                        NormalizedName = "Employee"
+                    },
+                    new IdentityRole
+                    {
+                        Name = "Operation",
+                        NormalizedName = "Operation"
+                    });
         }
     }
 }
