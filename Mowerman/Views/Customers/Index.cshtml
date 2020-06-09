@@ -1,107 +1,149 @@
 ﻿@model IEnumerable<Mowerman.Models.Customer>
 
-@{
-    ViewData["Title"] = "Index";
-}
+@{ Layout = "~/Views/Shared/_Layout.cshtml"; }
 
-<h1>Home</h1>
+<!DOCTYPE html>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.MowDay)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ExtraMowDay)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Address)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.State)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ZipCode)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.PhoneNumber)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.StartDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EndDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Balance)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ServicesConfirmationDate)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ExtraServicesDayConfirmation)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IdentityUser)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.MowDay)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ExtraMowDay)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Address)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.State)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ZipCode)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.PhoneNumber)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.StartDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.EndDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Balance)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ServicesConfirmationDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ExtraServicesDayConfirmation)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.IdentityUser.Id)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
+<html>
+<head>
+    
+        <meta charset="UTF-8">
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+        
+        <style>
+            #wind_direction, #wind_speed, #wind_speed_unit, #wind_degree_unit, #weather_conditions, #main_temp_unit, #main_temp {
+                color: red;
+                font-weight: bold;
+            }
+
+            body {
+                margin: 20px;
+            }
+        </style>
+   
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MowDay)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ExtraMowDay)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Address)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ZipCode)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StartDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.EndDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Balance)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ServicesConfirmationDate)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ExtraServicesDayConfirmation)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.IdentityUser)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Name)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.MowDay)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ExtraMowDay)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Address)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ZipCode)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.StartDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.EndDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.Balance)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ServicesConfirmationDate)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.ExtraServicesDayConfirmation)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.IdentityUser.Id)
+    </td>
+    <td>
+        <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+        <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+        <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+    </td>
+</tr>}
+        </tbody>
+    </table>
+    <script>
+
+        function checkWind() {
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "dataType": "json",
+                "url": "https://api.openweathermap.org/data/2.5/weather?zip=item.Zipcode,us&appid=66bea5a2c8348fa1ff3a7c99865ed684&units=imperial",
+                "method": "GET"
+            }
+
+            $.ajax(settings)
+
+                .done(function (response) {
+                    console.log(response);
+
+                    $("#wind_speed").append(response.wind.speed);
+                    $("#wind_direction").append(response.wind.deg);
+                    $("#main_temp").append(response.main.temp);
+                    $("#weather_conditions").append(response.weather[0].main);
+                    $("#wind_speed_unit").append(" MPH");
+                    $("#wind_degree_unit").append(" degrees");
+                    $("#main_temp_unit").append(" F");
+                });
+        }
+    </script>
+    <button type="button" onclick="checkWind()" class="btn btn-danger weatherbutton">Check wind conditions</button>
+    <h2>Wind conditions for your area</h2>
+    <span><b>Temperature: </b></span><span id="main_temp"></span></span><br />
+    <span><b>Wind speed: </b></span><span id="wind_speed"></span> <br />
+    <span><b>Wind direction: </b></span><span id="wind_direction"></span></span><br />
+    <span><b>Current conditions: </b></span><span id="weather_conditions"></span>
+</body>
+</html>
