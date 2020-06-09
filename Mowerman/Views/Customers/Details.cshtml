@@ -1,69 +1,108 @@
 ﻿@model Mowerman.Models.Customer
 @{ ViewData["Title"] = "Details";
-                Layout = "~/Views/Shared/_Layout.cshtml"; }
-
-<h1>Quick View</h1>
-
-<div>
-    <h4>Customer</h4>
-    <hr />
-    <dl class="row">
-
-        <dt class="col-sm-3">
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd class="col-sm-9">
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-        <dt class="col-sm-3">
-            @Html.DisplayNameFor(model => model.MowDay)
-        </dt>
-        <dd class="col-sm-9">
-            @Html.DisplayFor(model => model.MowDay)
-        </dd>
-
-        <dt class="col-sm-3">
-            @Html.DisplayNameFor(model => model.Address)
-        </dt>
-        <dd class="col-sm-9">
-            @Html.DisplayFor(model => model.Address)
-        </dd>
-        <dt class="col-sm-3">
-            @Html.DisplayNameFor(model => model.ZipCode)
-        </dt>
-        <dd class="col-sm-9">
-            @Html.DisplayFor(model => model.ZipCode)
-        </dd>
-
+    Layout = "~/Views/Shared/_Layout.cshtml"; }
+<head>
+    <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+    <title>OpenWeatherMap Integration</title>
+    <style>
+        #wind_direction, #wind_speed, #wind_speed_unit, #wind_degree_unit, #weather_conditions, #main_temp_unit, #main_temp {
+            color: red;
+            font-weight: bold;
+        }
+        body {
+            margin: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quick View</h1>
+    <div>
+        <h4>Customer</h4>
         <hr />
-        <dt class="col-sm-3">
-            @Html.DisplayNameFor(model => model.ExtraMowDay)
-        </dt>
-        <dd class="col-sm-9">
-            @Html.DisplayFor(model => model.ExtraMowDay)
-        </dd>
-        <dt class="col-sm-3">
-            @Html.DisplayNameFor(model => model.StartDate)
-        </dt>
-        <dd class="col-sm-9">
-            @Html.DisplayFor(model => model.StartDate)
-        </dd>
-
-        <dt class="col-sm-3">
-            @Html.DisplayNameFor(model => model.EndDate)
-        </dt>
-        <dd class="col-sm-9">
-            @Html.DisplayFor(model => model.EndDate)
-        </dd>
-        <dt class="col-sm-3">
-            @Html.DisplayNameFor(model => model.Balance)
-        </dt>
-        <dd class="col-sm-9">
-            @Html.DisplayFor(model => model.Balance)
-        </dd>
-    </dl>
-</div>
-<div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
-    @*<a asp-action="Index">Back to List</a>*@
-</div>
+        <dl class="row">
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.MowDay)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.MowDay)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Address)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Address)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.ZipCode)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.ZipCode)
+            </dd>
+            <hr />
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.ExtraMowDay)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.ExtraMowDay)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.StartDate)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.StartDate)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.EndDate)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.EndDate)
+            </dd>
+            <dt class="col-sm-3">
+                @Html.DisplayNameFor(model => model.Balance)
+            </dt>
+            <dd class="col-sm-9">
+                @Html.DisplayFor(model => model.Balance)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+        @*<a asp-action="Index">Back to List</a>*@
+    </div>
+    <script>
+        function checkWind() {
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "dataType": "json",
+                "url": "https://api.openweathermap.org/data/2.5/weather?zip=" + @Model.ZipCode + ",us&appid=66bea5a2c8348fa1ff3a7c99865ed684&units=imperial",
+                "method": "GET"
+            }
+            $.ajax(settings)
+                .done(function (response) {
+                    console.log(response);
+                    $("#wind_speed").append(response.wind.speed);
+                    $("#wind_direction").append(response.wind.deg);
+                    $("#main_temp").append(response.main.temp);
+                    $("#weather_conditions").append(response.weather[0].main);
+                    $("#wind_speed_unit").append(" MPH");
+                    $("#wind_degree_unit").append(" degrees");
+                    $("#main_temp_unit").append(" F");
+                });
+        }
+    </script>
+    <button type="button" onclick="checkWind()" class="btn btn-danger weatherbutton">Check Weather conditions</button>
+    <h2>Weather conditions for your area.</h2>
+    <span><b>Temperature: </b></span><span id="main_temp"></span><span id="main_temp_unit"></span><br />
+    <span><b>Wind speed: </b></span><span id="wind_speed"></span> <span id="wind_speed_unit"></span><br />
+    <span><b>Wind direction: </b></span><span id="wind_direction"></span><span id="wind_degree_unit"></span><br />
+    <span><b>Current conditions: </b></span><span id="weather_conditions"></span>
+</body>

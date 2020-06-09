@@ -48,22 +48,22 @@ namespace Mowerman.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "8f0f4a98-bdbd-49c0-8a50-2d064122bb8b",
-                            ConcurrencyStamp = "61eac4f4-b756-4977-8675-522bb262e7d8",
+                            Id = "87ae5b69-51f1-4858-acb3-002520b099f1",
+                            ConcurrencyStamp = "8e9237ab-c164-4420-826b-161aac3abce5",
                             Name = "Customer",
                             NormalizedName = "Customer"
                         },
                         new
                         {
-                            Id = "5ff1fde5-62db-4de5-a551-62994a4d8141",
-                            ConcurrencyStamp = "86219334-faa1-4803-900d-677df3174b53",
+                            Id = "c325c8bb-34f5-4c0d-8528-bedacce8eae9",
+                            ConcurrencyStamp = "17508ac6-d5eb-4702-b352-e669897c75a0",
                             Name = "Employee",
                             NormalizedName = "Employee"
                         },
                         new
                         {
-                            Id = "1dc5e728-6412-4881-a8de-e4b3d03262e2",
-                            ConcurrencyStamp = "a166c80a-3aec-45da-af84-573559f48317",
+                            Id = "9383383f-fde0-408d-b4f7-c088ceb8e7f2",
+                            ConcurrencyStamp = "576fd538-3eda-4f31-82c1-bffd0f2522de",
                             Name = "Operation",
                             NormalizedName = "Operation"
                         });
@@ -255,8 +255,8 @@ namespace Mowerman.Migrations
                     b.Property<DateTime?>("EndDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime?>("ExtraMowDay")
-                        .HasColumnType("datetime2");
+                    b.Property<int?>("ExtraMowDay")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("ExtraServicesDayConfirmation")
                         .HasColumnType("datetime2");

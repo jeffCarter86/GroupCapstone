@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Mowerman.Migrations
 {
-    public partial class Initial : Migration
+    public partial class UpdatedExtraMow : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -92,8 +92,8 @@ namespace Mowerman.Migrations
                 name: "AspNetUserLogins",
                 columns: table => new
                 {
-                    LoginProvider = table.Column<string>(maxLength: 128, nullable: false),
-                    ProviderKey = table.Column<string>(maxLength: 128, nullable: false),
+                    LoginProvider = table.Column<string>(nullable: false),
+                    ProviderKey = table.Column<string>(nullable: false),
                     ProviderDisplayName = table.Column<string>(nullable: true),
                     UserId = table.Column<string>(nullable: false)
                 },
@@ -137,8 +137,8 @@ namespace Mowerman.Migrations
                 columns: table => new
                 {
                     UserId = table.Column<string>(nullable: false),
-                    LoginProvider = table.Column<string>(maxLength: 128, nullable: false),
-                    Name = table.Column<string>(maxLength: 128, nullable: false),
+                    LoginProvider = table.Column<string>(nullable: false),
+                    Name = table.Column<string>(nullable: false),
                     Value = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
@@ -160,11 +160,11 @@ namespace Mowerman.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(nullable: true),
                     MowDay = table.Column<int>(nullable: true),
-                    ExtraMowDay = table.Column<DateTime>(nullable: true),
+                    ExtraMowDay = table.Column<int>(nullable: true),
                     Address = table.Column<string>(nullable: false),
-                    State = table.Column<string>(nullable: false),
+                    State = table.Column<string>(nullable: true),
                     ZipCode = table.Column<string>(nullable: false),
-                    PhoneNumber = table.Column<string>(nullable: false),
+                    PhoneNumber = table.Column<string>(nullable: true),
                     StartDate = table.Column<DateTime>(nullable: true),
                     EndDate = table.Column<DateTime>(nullable: true),
                     Balance = table.Column<decimal>(nullable: false),
@@ -235,17 +235,17 @@ namespace Mowerman.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "4b4df7cd-8211-41a0-acc2-f1733feb4aec", "906a5b78-cacf-4df9-89c3-d08db4c63ba0", "Customer", "Customer" });
+                values: new object[] { "87ae5b69-51f1-4858-acb3-002520b099f1", "8e9237ab-c164-4420-826b-161aac3abce5", "Customer", "Customer" });
 
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "1398afb5-8429-41cc-9bda-6f7881f39237", "6a4e0e20-f7c4-41ab-8e59-136bcb5c0e9e", "Employee", "Employee" });
+                values: new object[] { "c325c8bb-34f5-4c0d-8528-bedacce8eae9", "17508ac6-d5eb-4702-b352-e669897c75a0", "Employee", "Employee" });
 
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "74f3d9bc-60c6-4651-b604-bcd0c2351541", "64031fda-2d88-47ca-a149-d4ad3f6bcc32", "Operation", "Operation" });
+                values: new object[] { "9383383f-fde0-408d-b4f7-c088ceb8e7f2", "576fd538-3eda-4f31-82c1-bffd0f2522de", "Operation", "Operation" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",

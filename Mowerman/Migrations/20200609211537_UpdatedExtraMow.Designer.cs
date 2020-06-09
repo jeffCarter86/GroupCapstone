@@ -10,8 +10,8 @@ using Mowerman.Data;
 namespace Mowerman.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200608192933_Initial")]
-    partial class Initial
+    [Migration("20200609211537_UpdatedExtraMow")]
+    partial class UpdatedExtraMow
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -50,22 +50,22 @@ namespace Mowerman.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "4b4df7cd-8211-41a0-acc2-f1733feb4aec",
-                            ConcurrencyStamp = "906a5b78-cacf-4df9-89c3-d08db4c63ba0",
+                            Id = "87ae5b69-51f1-4858-acb3-002520b099f1",
+                            ConcurrencyStamp = "8e9237ab-c164-4420-826b-161aac3abce5",
                             Name = "Customer",
                             NormalizedName = "Customer"
                         },
                         new
                         {
-                            Id = "1398afb5-8429-41cc-9bda-6f7881f39237",
-                            ConcurrencyStamp = "6a4e0e20-f7c4-41ab-8e59-136bcb5c0e9e",
+                            Id = "c325c8bb-34f5-4c0d-8528-bedacce8eae9",
+                            ConcurrencyStamp = "17508ac6-d5eb-4702-b352-e669897c75a0",
                             Name = "Employee",
                             NormalizedName = "Employee"
                         },
                         new
                         {
-                            Id = "74f3d9bc-60c6-4651-b604-bcd0c2351541",
-                            ConcurrencyStamp = "64031fda-2d88-47ca-a149-d4ad3f6bcc32",
+                            Id = "9383383f-fde0-408d-b4f7-c088ceb8e7f2",
+                            ConcurrencyStamp = "576fd538-3eda-4f31-82c1-bffd0f2522de",
                             Name = "Operation",
                             NormalizedName = "Operation"
                         });
@@ -187,12 +187,10 @@ namespace Mowerman.Migrations
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
                 {
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(128)")
-                        .HasMaxLength(128);
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderKey")
-                        .HasColumnType("nvarchar(128)")
-                        .HasMaxLength(128);
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("ProviderDisplayName")
                         .HasColumnType("nvarchar(max)");
@@ -229,12 +227,10 @@ namespace Mowerman.Migrations
                         .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("LoginProvider")
-                        .HasColumnType("nvarchar(128)")
-                        .HasMaxLength(128);
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Name")
-                        .HasColumnType("nvarchar(128)")
-                        .HasMaxLength(128);
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("Value")
                         .HasColumnType("nvarchar(max)");
@@ -261,8 +257,8 @@ namespace Mowerman.Migrations
                     b.Property<DateTime?>("EndDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime?>("ExtraMowDay")
-                        .HasColumnType("datetime2");
+                    b.Property<int?>("ExtraMowDay")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("ExtraServicesDayConfirmation")
                         .HasColumnType("datetime2");
@@ -277,7 +273,6 @@ namespace Mowerman.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("PhoneNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("ServicesConfirmationDate")
@@ -287,7 +282,6 @@ namespace Mowerman.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("State")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ZipCode")

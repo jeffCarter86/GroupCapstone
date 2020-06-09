@@ -32,7 +32,7 @@
             <div class="form-group">
                 <label asp-for="MowDay" class="control-label"></label>
                 <select asp-for="MowDay" class="form-control" asp-items="Html.GetEnumSelectList<DayOfWeek>()">
-                    <option value="">Choose your pickup day</option>
+                    <option value="">Choose your Weekly Service day</option>
                 </select>
             </div>
             <div>
@@ -43,7 +43,7 @@
             <div class="form-group">
                 <label asp-for="ExtraMowDay" class="control-label"></label>
                 <select asp-for="ExtraMowDay" class="form-control" asp-items="Html.GetEnumSelectList<DayOfWeek>()">
-                    <option value="">Choose your optional one-time extra collection day</option>
+                    <option value="">Select Extra Mow Day</option>
                 </select>
             </div>
 

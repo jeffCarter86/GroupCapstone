@@ -18,9 +18,10 @@ namespace Mowerman.Models
         public DayOfWeek? MowDay { get; set; }
 
         [Display(Name = "One-Time Extra Mow Day")]
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
-        public DateTime? ExtraMowDay { get; set; }
+        public DayOfWeek? ExtraMowDay { get; set; }
+        //[datatype(datatype.date)]
+        //[displayformat(dataformatstring = "{0:mm-dd-yyyy}", applyformatineditmode = true)]
+        //public datetime? extramowday { get; set; }
 
         [Display(Name = "Street Address")]
         [Required(ErrorMessage = "Address is Required")]
