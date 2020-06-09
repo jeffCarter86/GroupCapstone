@@ -576,3 +576,4 @@ C:\Users\uglym\OneDrive\Desktop\school\week10\projects\GroupCapstone\Mowerman\ob
 C:\Users\uglym\OneDrive\Desktop\school\week10\projects\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.dll
 C:\Users\uglym\OneDrive\Desktop\school\week10\projects\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.pdb
 C:\Users\uglym\OneDrive\Desktop\school\week10\projects\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.genruntimeconfig.cache
+C:\Users\uglym\OneDrive\Desktop\school\week10\projects\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Razor\Views\Customers\View.cshtml.g.cs
