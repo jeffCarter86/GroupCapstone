@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\13184\\Desktop\\devCodeCamp\\Week_10\\Projects\\GroupCapstone-master\\GroupCapstone-master\\GroupCapstone\\Mowerman\\Mowerman.csproj": {}
   },
   "projects": {
@@ -15,6 +16,22 @@
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\13184\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+    "C:\\Users\\ledze\\Desktop\\GroupCapstone\\Mowerman\\Mowerman.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\ledze\\Desktop\\GroupCapstone\\Mowerman\\Mowerman.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\ledze\\Desktop\\GroupCapstone\\Mowerman\\Mowerman.csproj",
+        "projectName": "Mowerman",
+        "projectPath": "C:\\Users\\ledze\\Desktop\\GroupCapstone\\Mowerman\\Mowerman.csproj",
+        "packagesPath": "C:\\Users\\ledze\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ledze\\Desktop\\GroupCapstone\\Mowerman\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\ledze\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> a9f7a6b066115b84a1c540e95b1f6cfe97da7b9f
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

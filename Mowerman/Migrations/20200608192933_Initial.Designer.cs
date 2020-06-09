@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Mowerman.Data;
 
-namespace Mowerman.Data.Migrations
+namespace Mowerman.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200608192933_Initial")]
+    partial class Initial
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,22 +50,22 @@ namespace Mowerman.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "dc6e1b78-a580-4de0-8e78-5a3d2faaff62",
-                            ConcurrencyStamp = "5c8b348a-ac5c-4e72-9cd8-e9fe78c89945",
+                            Id = "4b4df7cd-8211-41a0-acc2-f1733feb4aec",
+                            ConcurrencyStamp = "906a5b78-cacf-4df9-89c3-d08db4c63ba0",
                             Name = "Customer",
                             NormalizedName = "Customer"
                         },
                         new
                         {
-                            Id = "94a07be3-24cb-4c28-8f13-6c9045c648af",
-                            ConcurrencyStamp = "78458ea4-e96e-4aab-8c06-8fadb0ecfd4c",
+                            Id = "1398afb5-8429-41cc-9bda-6f7881f39237",
+                            ConcurrencyStamp = "6a4e0e20-f7c4-41ab-8e59-136bcb5c0e9e",
                             Name = "Employee",
                             NormalizedName = "Employee"
                         },
                         new
                         {
-                            Id = "4e579549-6c5a-49a3-ac87-babda6ba9805",
-                            ConcurrencyStamp = "1ebc551d-236e-4724-b914-32082410e019",
+                            Id = "74f3d9bc-60c6-4651-b604-bcd0c2351541",
+                            ConcurrencyStamp = "64031fda-2d88-47ca-a149-d4ad3f6bcc32",
                             Name = "Operation",
                             NormalizedName = "Operation"
                         });
@@ -259,8 +261,8 @@ namespace Mowerman.Data.Migrations
                     b.Property<DateTime?>("EndDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("ExtraMowDay")
-                        .HasColumnType("int");
+                    b.Property<DateTime?>("ExtraMowDay")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("ExtraServicesDayConfirmation")
                         .HasColumnType("datetime2");
@@ -274,11 +276,19 @@ namespace Mowerman.Data.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime?>("ServicesConfirmationDate")
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("StartDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("State")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ZipCode")
                         .IsRequired()

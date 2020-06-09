@@ -19,16 +19,25 @@ namespace Mowerman.Models
         public DayOfWeek? MowDay { get; set; }
 
         [Display(Name = "One-Time Extra Mow Day")]
-        public DayOfWeek? ExtraMowDay { get; set; }
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime? ExtraMowDay { get; set; }
 
         [Display(Name = "Street Address")]
         [Required(ErrorMessage = "Address is Required")]
         public string Address { get; set; }
+        [Display(Name = "State")]
+        [Required(ErrorMessage = "State is Required")]
+        public string State { get; set; }
 
         [Display(Name = "Zip Code")]
         //[RegularExpression(@"^\d{5}(-\d{4})?$", ErrorMessage = "Invalid Zip")]
         [Required(ErrorMessage = "Zip Code is Required")]
         public string ZipCode { get; set; }
+
+        [Display(Name = "Phone Number")]
+        [Required(ErrorMessage = "Phone Number is Required")]
+        public string PhoneNumber { get; set; }
 
         [Display(Name = "Suspend Services Start Date")]
         [DataType(DataType.Date)]
