@@ -24,10 +24,19 @@ namespace Mowerman.Controllers
         }
 
         // GET: Customers
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var applicationDbContext = _context.Customers.Include(c => c.IdentityUser);
-            return View(await applicationDbContext.ToListAsync());
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+            var customer = _context.Customers.Where(c => c.IdentityUserId == userId).FirstOrDefault();
+            if(customer == null)
+            {
+                return View("Create");
+            }
+            else
+            {
+                return View("Details", customer);
+            }
+           
         }
 
         // GET: Customers/Details/5
@@ -62,29 +71,29 @@ namespace Mowerman.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,MowDay,Address,ZipCode,IdentityUserId")] Customer customer)
+        public IActionResult Create([Bind("Id,Name,MowDay,Address,ZipCode,IdentityUserId,MowDay")] Customer customer)
         {
-            if (ModelState.IsValid)
-            {
-                if (customer.Id == 0)
-                {
+            //if (ModelState.IsValid)
+            //{
+                //if (customer.Id == 0)
+                //{
                     var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
                     customer.IdentityUserId = userId;
                     _context.Customers.Add(customer);
-                }
-                else
-                {
-                    var customerInDB = _context.Customers.Single(m => m.Id == customer.Id);
-                    customerInDB.Name = customer.Name;
-                    customerInDB.Address = customer.Address;
-                    customerInDB.ZipCode = customer.ZipCode;
-                    customerInDB.MowDay = customer.MowDay;
-                }
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Details), new { id = customer.Id.ToString() });
-            }
-            ViewData["IdentityUserId"] = new SelectList(_context.Users, "Id", "Id", customer.IdentityUserId);
-            return View(customer.Id);
+                //}
+                //else
+                //{
+                //    var customerInDB = _context.Customers.Single(m => m.Id == customer.Id);
+                //    customerInDB.Name = customer.Name;
+                //    customerInDB.Address = customer.Address;
+                //    customerInDB.ZipCode = customer.ZipCode;
+                //    customerInDB.MowDay = customer.MowDay;
+                //}
+                 _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            //}
+            //ViewData["IdentityUserId"] = new SelectList(_context.Users, "Id", "Id", customer.IdentityUserId);
+            //return View("Index");
         }
 
         // GET: Customers/Edit/5

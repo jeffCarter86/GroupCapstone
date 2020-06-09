@@ -26,7 +26,7 @@ namespace Mowerman.Models
         [Required(ErrorMessage = "Address is Required")]
         public string Address { get; set; }
         [Display(Name = "State")]
-        [Required(ErrorMessage = "State is Required")]
+       
         public string State { get; set; }
 
         [Display(Name = "Zip Code")]
@@ -35,7 +35,7 @@ namespace Mowerman.Models
         public string ZipCode { get; set; }
 
         [Display(Name = "Phone Number")]
-        [Required(ErrorMessage = "Phone Number is Required")]
+       
         public string PhoneNumber { get; set; }
 
         [Display(Name = "Suspend Services Start Date")]
