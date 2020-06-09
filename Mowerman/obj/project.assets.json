@@ -8957,42 +8957,25 @@
     ]
   },
   "packageFolders": {
-<<<<<<< HEAD
-    "C:\\Users\\david\\.nuget\\packages\\": {}
-=======
     "C:\\Users\\uglym\\.nuget\\packages\\": {},
     "C:\\Microsoft\\Xamarin\\NuGet\\": {}
->>>>>>> 169a52b638ada7bd64f4f57b9c2e714e74194a33
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-<<<<<<< HEAD
-      "projectUniqueName": "C:\\Users\\david\\Desktop\\devCodeCamp\\Group Capstone\\GroupCapstone\\GroupCapstone\\Mowerman\\Mowerman.csproj",
-      "projectName": "Mowerman",
-      "projectPath": "C:\\Users\\david\\Desktop\\devCodeCamp\\Group Capstone\\GroupCapstone\\GroupCapstone\\Mowerman\\Mowerman.csproj",
-      "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\david\\Desktop\\devCodeCamp\\Group Capstone\\GroupCapstone\\GroupCapstone\\Mowerman\\obj\\",
-=======
       "projectUniqueName": "C:\\Users\\uglym\\OneDrive\\Desktop\\school\\week10\\projects\\GroupCapstone\\Mowerman\\Mowerman.csproj",
       "projectName": "Mowerman",
       "projectPath": "C:\\Users\\uglym\\OneDrive\\Desktop\\school\\week10\\projects\\GroupCapstone\\Mowerman\\Mowerman.csproj",
       "packagesPath": "C:\\Users\\uglym\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\uglym\\OneDrive\\Desktop\\school\\week10\\projects\\GroupCapstone\\Mowerman\\obj\\",
->>>>>>> 169a52b638ada7bd64f4f57b9c2e714e74194a33
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
       ],
       "configFilePaths": [
-<<<<<<< HEAD
-        "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-=======
         "C:\\Users\\uglym\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
->>>>>>> 169a52b638ada7bd64f4f57b9c2e714e74194a33
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -9071,5 +9054,13 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\Users\\uglym\\OneDrive\\Desktop\\school\\week10\\projects\\GroupCapstone\\Mowerman\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
