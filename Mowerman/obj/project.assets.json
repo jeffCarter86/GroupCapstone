@@ -989,7 +989,7 @@
           "System.Xml.XDocument": "4.3.0"
         }
       },
-      "Newtonsoft.Json/12.0.2": {
+      "Newtonsoft.Json/12.0.3": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
@@ -4404,10 +4404,10 @@
         "netstandard.library.nuspec"
       ]
     },
-    "Newtonsoft.Json/12.0.2": {
-      "sha512": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
+    "Newtonsoft.Json/12.0.3": {
+      "sha512": "6mgjfnRB4jKMlzHSl+VD+oUc1IebOZabkbyWj2RiTgWwYPPuaK1H97G1sHqGwPlS5npiF5Q0OrxN1wni2n5QWg==",
       "type": "package",
-      "path": "newtonsoft.json/12.0.2",
+      "path": "newtonsoft.json/12.0.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -4430,8 +4430,9 @@
         "lib/portable-net40+sl5+win8+wp8+wpa81/Newtonsoft.Json.xml",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.dll",
         "lib/portable-net45+win8+wp8+wpa81/Newtonsoft.Json.xml",
-        "newtonsoft.json.12.0.2.nupkg.sha512",
-        "newtonsoft.json.nuspec"
+        "newtonsoft.json.12.0.3.nupkg.sha512",
+        "newtonsoft.json.nuspec",
+        "packageIcon.png"
       ]
     },
     "NuGet.Frameworks/4.7.0": {
@@ -8953,15 +8954,30 @@
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.4",
       "Microsoft.EntityFrameworkCore.Sqlite >= 3.1.4",
       "Microsoft.EntityFrameworkCore.Tools >= 3.1.4",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.3"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.1.3",
+      "Newtonsoft.Json >= 12.0.3"
     ]
   },
   "packageFolders": {
+<<<<<<< HEAD
+    "C:\\Users\\13184\\.nuget\\packages\\": {}
+=======
     "C:\\Users\\ledze\\.nuget\\packages\\": {}
+>>>>>>> a9f7a6b066115b84a1c540e95b1f6cfe97da7b9f
   },
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
+      "projectUniqueName": "C:\\Users\\13184\\Desktop\\devCodeCamp\\Week_10\\Projects\\GroupCapstone-master\\GroupCapstone-master\\GroupCapstone\\Mowerman\\Mowerman.csproj",
+      "projectName": "Mowerman",
+      "projectPath": "C:\\Users\\13184\\Desktop\\devCodeCamp\\Week_10\\Projects\\GroupCapstone-master\\GroupCapstone-master\\GroupCapstone\\Mowerman\\Mowerman.csproj",
+      "packagesPath": "C:\\Users\\13184\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\13184\\Desktop\\devCodeCamp\\Week_10\\Projects\\GroupCapstone-master\\GroupCapstone-master\\GroupCapstone\\Mowerman\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\13184\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
       "projectUniqueName": "C:\\Users\\ledze\\Desktop\\GroupCapstone\\Mowerman\\Mowerman.csproj",
       "projectName": "Mowerman",
       "projectPath": "C:\\Users\\ledze\\Desktop\\GroupCapstone\\Mowerman\\Mowerman.csproj",
@@ -8970,6 +8986,7 @@
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\ledze\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> a9f7a6b066115b84a1c540e95b1f6cfe97da7b9f
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9020,6 +9037,10 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
             "target": "Package",
             "version": "[3.1.3, )"
+          },
+          "Newtonsoft.Json": {
+            "target": "Package",
+            "version": "[12.0.3, )"
           }
         },
         "imports": [
