@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <UserSecretsId>aspnet-Mowerman-80987B7E-8D62-430B-AFD0-91558640E2B6</UserSecretsId>
+    <UserSecretsId>m</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>

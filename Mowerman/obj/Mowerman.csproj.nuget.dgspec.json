@@ -1,21 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\david\\Desktop\\devCodeCamp\\Group Capstone\\GroupCapstone\\Mowerman\\Mowerman.csproj": {}
+    "C:\\Users\\uglym\\OneDrive\\Desktop\\school\\week9\\projects\\GroupCapstone\\Mowerman\\Mowerman.csproj": {}
   },
   "projects": {
-    "C:\\Users\\david\\Desktop\\devCodeCamp\\Group Capstone\\GroupCapstone\\Mowerman\\Mowerman.csproj": {
+    "C:\\Users\\uglym\\OneDrive\\Desktop\\school\\week9\\projects\\GroupCapstone\\Mowerman\\Mowerman.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\david\\Desktop\\devCodeCamp\\Group Capstone\\GroupCapstone\\Mowerman\\Mowerman.csproj",
+        "projectUniqueName": "C:\\Users\\uglym\\OneDrive\\Desktop\\school\\week9\\projects\\GroupCapstone\\Mowerman\\Mowerman.csproj",
         "projectName": "Mowerman",
-        "projectPath": "C:\\Users\\david\\Desktop\\devCodeCamp\\Group Capstone\\GroupCapstone\\Mowerman\\Mowerman.csproj",
-        "packagesPath": "C:\\Users\\david\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\david\\Desktop\\devCodeCamp\\Group Capstone\\GroupCapstone\\Mowerman\\obj\\",
+        "projectPath": "C:\\Users\\uglym\\OneDrive\\Desktop\\school\\week9\\projects\\GroupCapstone\\Mowerman\\Mowerman.csproj",
+        "packagesPath": "C:\\Users\\uglym\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\uglym\\OneDrive\\Desktop\\school\\week9\\projects\\GroupCapstone\\Mowerman\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
         "configFilePaths": [
-          "C:\\Users\\david\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\uglym\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -77,6 +81,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[3.1.2, 3.1.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -85,7 +95,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.300\\RuntimeIdentifierGraph.json"
         }
       }
     }
