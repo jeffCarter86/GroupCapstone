@@ -11,210 +11,254 @@
     Layout = "~/Views/Shared/_EmployeeLayout.cshtml";
 
 }
+    <head>
+        <meta charset="UTF-8">
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <link rel="stylesheet" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+        <title>OpenWeatherMap Integration</title>
+        <style>
+            #wind_direction, #wind_speed, #wind_speed_unit, #wind_degree_unit, #weather_conditions, #main_temp_unit, #main_temp {
+                color: red;
+                font-weight: bold;
+            }
+
+            body {
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
 
 
+        <h1>Today's Services</h1>
 
-<h1>Today's Services</h1>
-
-@using (Html.BeginForm("Filter", "Employees"))
-
-{
-
-    @Html.ValidationSummary(true)
-
-    <fieldset>
-
-        <p>
-
-            @Html.DropDownList("Day")
-
-        </p>
-
-        <p>
-
-            <input type="submit" value="Display" />
-
-        </p>
-
-    </fieldset>
-
-}
-
-
-
-<table class="table">
-
-    <thead>
-
-        <tr>
-
-            <th>
-
-                @Html.DisplayNameFor(model => model.Name)
-
-            </th>
-
-            <th>
-
-                @Html.DisplayNameFor(model => model.MowDay)
-
-            </th>
-
-            <th>
-
-                @Html.DisplayNameFor(model => model.ExtraMowDay)
-
-            </th>
-
-            <th>
-
-                @Html.DisplayNameFor(model => model.Address)
-
-            </th>
-
-            <th>
-
-                @Html.DisplayNameFor(model => model.ZipCode)
-
-            </th>
-
-            <th>
-
-                @Html.DisplayNameFor(model => model.StartDate)
-
-            </th>
-
-            <th>
-
-                @Html.DisplayNameFor(model => model.EndDate)
-
-            </th>
-
-            <th>
-
-                @Html.DisplayNameFor(model => model.Balance)
-
-            </th>
-
-            <th>
-
-                @Html.DisplayNameFor(model => model.ServicesConfirmationDate)
-
-            </th>
-
-            <th></th>
-
-        </tr>
-
-    </thead>
-
-    <tbody>
-
-
-
-        @foreach (var item in Model)
+        @using (Html.BeginForm("Filter", "Employees"))
 
         {
 
-            var today = DateTime.Today.DayOfWeek;
+            @Html.ValidationSummary(true)
 
-            var todaysDate = DateTime.Today;
+            <fieldset>
 
-            @if ((Equals(item.MowDay, today)) ||
+                <p>
 
-       Equals(item.ExtraMowDay, today)
+                    @Html.DropDownList("Day")
 
-         &&
+                </p>
 
-         (item.StartDate > todaysDate ||
+                <p>
 
-         item.EndDate < todaysDate))
+                    <input type="submit" value="Display" />
 
-            {
+                </p>
 
-                <tr>
-
-                    <td>
-
-
-
-                        @Html.DisplayFor(modelItem => item.Name)
-
-                    </td>
-
-                    <td>
-
-                        @Html.DisplayFor(modelItem => item.MowDay)
-
-                    </td>
-
-                    <td>
-
-                        @Html.DisplayFor(modelItem => item.ExtraMowDay)
-
-                    </td>
-
-                    <td>
-
-                        @Html.DisplayFor(modelItem => item.Address)
-
-                    </td>
-
-                    <td>
-
-                        @Html.DisplayFor(modelItem => item.ZipCode)
-
-                    </td>
-
-                    <td>
-
-                        @Html.DisplayFor(modelItem => item.StartDate)
-
-                    </td>
-
-                    <td>
-
-                        @Html.DisplayFor(modelItem => item.EndDate)
-
-                    </td>
-
-                    <td>
-
-                        @Html.DisplayFor(modelItem => item.Balance)
-
-                    </td>
-
-                    <th>
-
-                        @Html.DisplayFor(modelItem => item.ServicesConfirmationDate)
-
-                    </th>
-
-
-
-                    <td>
-
-                        <a asp-action="Edit" asp-route-id="@item.Id">Confirm Pickup</a>
-
-                        <hr />
-
-                        <a asp-action="Details" asp-route-id="@item.Id">Details</a>
-
-                        @*<a asp-action="Delete" asp-route-id="@item.Id">Delete</a>*@
-
-                    </td>
-
-                </tr>
-
-            }
+            </fieldset>
 
         }
 
-    </tbody>
-
-</table>
 
 
+        <table class="table">
+
+            <thead>
+
+                <tr>
+
+                    <th>
+
+                        @Html.DisplayNameFor(model => model.Name)
+
+                    </th>
+
+                    <th>
+
+                        @Html.DisplayNameFor(model => model.MowDay)
+
+                    </th>
+
+                    <th>
+
+                        @Html.DisplayNameFor(model => model.ExtraMowDay)
+
+                    </th>
+
+                    <th>
+
+                        @Html.DisplayNameFor(model => model.Address)
+
+                    </th>
+
+                    <th>
+
+                        @Html.DisplayNameFor(model => model.ZipCode)
+
+                    </th>
+
+                    <th>
+
+                        @Html.DisplayNameFor(model => model.StartDate)
+
+                    </th>
+
+                    <th>
+
+                        @Html.DisplayNameFor(model => model.EndDate)
+
+                    </th>
+
+                    <th>
+
+                        @Html.DisplayNameFor(model => model.Balance)
+
+                    </th>
+
+                    <th>
+
+                        @Html.DisplayNameFor(model => model.ServicesConfirmationDate)
+
+                    </th>
+
+                    <th></th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+
+
+                @foreach (var item in Model)
+
+                {
+
+                    var today = DateTime.Today.DayOfWeek;
+
+                    var todaysDate = DateTime.Today;
+
+                    @if ((Equals(item.MowDay, today)) ||
+
+              Equals(item.ExtraMowDay, today)
+
+                &&
+
+                (item.StartDate > todaysDate ||
+
+                item.EndDate < todaysDate))
+
+                    {
+
+                        <tr>
+
+                            <td>
+
+
+
+                                @Html.DisplayFor(modelItem => item.Name)
+
+                            </td>
+
+                            <td>
+
+                                @Html.DisplayFor(modelItem => item.MowDay)
+
+                            </td>
+
+                            <td>
+
+                                @Html.DisplayFor(modelItem => item.ExtraMowDay)
+
+                            </td>
+
+                            <td>
+
+                                @Html.DisplayFor(modelItem => item.Address)
+
+                            </td>
+
+                            <td>
+
+                                @Html.DisplayFor(modelItem => item.ZipCode)
+
+                            </td>
+
+                            <td>
+
+                                @Html.DisplayFor(modelItem => item.StartDate)
+
+                            </td>
+
+                            <td>
+
+                                @Html.DisplayFor(modelItem => item.EndDate)
+
+                            </td>
+
+                            <td>
+
+                                @Html.DisplayFor(modelItem => item.Balance)
+
+                            </td>
+
+                            <th>
+
+                                @Html.DisplayFor(modelItem => item.ServicesConfirmationDate)
+
+                            </th>
+
+
+
+                            <td>
+
+                                <a asp-action="Edit" asp-route-id="@item.Id">Confirm Pickup</a>
+
+                                <hr />
+
+                                <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+
+                                @*<a asp-action="Delete" asp-route-id="@item.Id">Delete</a>*@
+
+                            </td>
+
+                        </tr>
+
+                    }
+
+                }
+
+            </tbody>
+
+        </table>
+
+        <script>
+        function checkWind() {
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "dataType": "json",
+                "url": "https://api.openweathermap.org/data/2.5/weather?zip=53203,us&appid=66bea5a2c8348fa1ff3a7c99865ed684&units=imperial",
+                "method": "GET"
+            }
+            $.ajax(settings)
+                .done(function (response) {
+                    console.log(response);
+                    $("#wind_speed").append(response.wind.speed);
+                    $("#wind_direction").append(response.wind.deg);
+                    $("#main_temp").append(response.main.temp);
+                    $("#weather_conditions").append(response.weather[0].main);
+                    $("#wind_speed_unit").append(" MPH");
+                    $("#wind_degree_unit").append(" degrees");
+                    $("#main_temp_unit").append(" F");
+                });
+        }
+        </script>
+        <button type="button" onclick="checkWind()" class="btn btn-danger weatherbutton">Check Weather conditions</button>
+        <h2>Weather conditions for your area.</h2>
+        <span><b>Temperature: </b></span><span id="main_temp"></span><span id="main_temp_unit"></span><br />
+        <span><b>Wind speed: </b></span><span id="wind_speed"></span> <span id="wind_speed_unit"></span><br />
+        <span><b>Wind direction: </b></span><span id="wind_direction"></span><span id="wind_degree_unit"></span><br />
+        <span><b>Current conditions: </b></span><span id="weather_conditions"></span>
+    </body>
 
 
 
