@@ -15,10 +15,6 @@ using Mowerman.Models;
 namespace Mowerman.Controllers
 {
 
-
-
-
-
     [Authorize(Roles = "Employee")]
 
     public class EmployeesController : Controller
