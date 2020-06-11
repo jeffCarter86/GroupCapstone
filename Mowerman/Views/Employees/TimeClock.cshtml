@@ -1,0 +1,50 @@
+﻿@model Mowerman.Models.TimeClock
+
+@{
+    ViewData["Title"] = "Time Clock";
+}
+
+<h1>Time Clock</h1>
+
+<h4>Job Information</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+           
+            <div class="form-group">
+                <label asp-for="JobAddress" class="control-label"></label>
+                <input asp-for="JobAddress" class="form-control" />
+                <span asp-validation-for="JobAddress" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ZipCode" class="control-label"></label>
+                <input asp-for="ZipCode" class="form-control" />
+                <span asp-validation-for="ZipCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClockIn" class="control-label"></label>
+                <input asp-for="ClockIn" class="form-control" />
+                <span asp-validation-for="ClockIn" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ClockOut" class="control-label"></label>
+                <input asp-for="ClockOut" class="form-control" />
+                <span asp-validation-for="ClockOut" class="text-danger"></span>
+            </div>
+         
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to Services</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
