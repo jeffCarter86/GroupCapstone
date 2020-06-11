@@ -19,7 +19,11 @@ namespace Mowerman.Data
         public DbSet<Customer> Customers { get; set; }
         public DbSet<Employee> Employees { get; set; }
         public DbSet<Operation> Operations { get; set; }
+
+        public DbSet<TimeClock> TimeClock { get; set; }
         public object Customer { get; internal set; }
+
+    
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

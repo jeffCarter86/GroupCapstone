@@ -9,7 +9,11 @@ using System.Threading.Tasks;
 namespace Mowerman.Models
 {
     public class TimeClock
+
+
     {
+        public int Id { get; set; }
+
         [Display(Name = "Team")]
         public string Team { get; set; }
 
@@ -37,10 +41,6 @@ namespace Mowerman.Models
         public DateTime? Date { get; set; }
 
 
-
-        [NotMapped]
-        public IEnumerable<Customer> Employees { get; set; }
-        public IEnumerable<Customer> Operations { get; set; }
     }
 }
 
