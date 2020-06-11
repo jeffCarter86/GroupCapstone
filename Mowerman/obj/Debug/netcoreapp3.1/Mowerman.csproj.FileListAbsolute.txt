@@ -729,7 +729,6 @@ C:\Users\david\Desktop\devCodeCamp\Group Capstone\GroupCapstone\Mowerman\bin\Deb
 C:\Users\david\Desktop\devCodeCamp\Group Capstone\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\david\Desktop\devCodeCamp\Group Capstone\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 C:\Users\david\Desktop\devCodeCamp\Group Capstone\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\david\Desktop\devCodeCamp\Group Capstone\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.csprojAssemblyReference.cache
 C:\Users\david\Desktop\devCodeCamp\Group Capstone\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.AssemblyInfoInputs.cache
 C:\Users\david\Desktop\devCodeCamp\Group Capstone\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.AssemblyInfo.cs
 C:\Users\david\Desktop\devCodeCamp\Group Capstone\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.csproj.CoreCompileInputs.cache
