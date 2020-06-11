@@ -48,22 +48,22 @@ namespace Mowerman.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "6fea5978-8790-458e-ae22-6bdecc24aa3e",
-                            ConcurrencyStamp = "26bbff2a-a67e-4190-9882-59d3d4a2d00b",
+                            Id = "e6cad703-dc33-4648-a872-8d3b18157550",
+                            ConcurrencyStamp = "44ed3011-284b-4bc1-97b7-f07fb726ee7f",
                             Name = "Customer",
                             NormalizedName = "Customer"
                         },
                         new
                         {
-                            Id = "58a1fca5-fadd-4ee8-9ca1-b87ed459841f",
-                            ConcurrencyStamp = "b8bf0f4d-7ba3-4895-81fb-0f13b06c4622",
+                            Id = "eae6d034-0f39-4411-9d99-7d4a2ffe1346",
+                            ConcurrencyStamp = "c24ab697-f155-49b2-8e90-11732c9e1439",
                             Name = "Employee",
                             NormalizedName = "Employee"
                         },
                         new
                         {
-                            Id = "225757e5-d172-44cc-af13-e916d5e405de",
-                            ConcurrencyStamp = "4f0284e7-bc3e-48a6-a93e-01c4d6ecdfbe",
+                            Id = "0744940d-711c-41eb-a1a3-6af13a0dfaa4",
+                            ConcurrencyStamp = "c0d000c9-5dac-48e1-bb80-0c2b0e02dc17",
                             Name = "Operation",
                             NormalizedName = "Operation"
                         });
@@ -300,14 +300,29 @@ namespace Mowerman.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<DateTime?>("ClockIn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("ClockOut")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("Date")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("IdentityUserId")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("JobAddress")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("OperationId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Team")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ZipCode")
                         .IsRequired()

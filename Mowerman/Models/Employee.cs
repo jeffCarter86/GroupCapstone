@@ -20,6 +20,25 @@ namespace Mowerman.Models
         //[RegularExpression(@"^\d{5}(-\d{4})?$", ErrorMessage = "Invalid Zip")]
         [Required(ErrorMessage = "Zip Code is Required")]
         public string ZipCode { get; set; }
+        //[display(name = "team")]
+        //public string team { get; set; }
+
+        //[display(name = "job address")]
+        //public string jobaddress { get; set; }
+        //[display(name = "clock-in time")]
+        //[datatype(datatype.date)]
+        //[displayformat(dataformatstring = "{0:hh:mm}", applyformatineditmode = true)]
+        //public datetime? clockin { get; set; }
+
+        //[display(name = "clock-out time")]
+        //[datatype(datatype.date)]
+        //[displayformat(dataformatstring = "{0:hh:mm}", applyformatineditmode = true)]
+        //public datetime? clockout { get; set; }
+
+        //[display(name = "current date")]
+        //[datatype(datatype.date)]
+        //[displayformat(dataformatstring = "{0:mm-dd-yyyy}", applyformatineditmode = true)]
+        //public datetime? date { get; set; }
 
         [ForeignKey("IdentityUser")]
         public string IdentityUserId { get; set; }

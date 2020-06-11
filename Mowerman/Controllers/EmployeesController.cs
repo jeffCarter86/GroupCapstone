@@ -86,12 +86,20 @@ namespace Mowerman.Controllers
             var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
 
             var employee = _context.Employees.Where(c => c.IdentityUserId == userId).SingleOrDefault();
+            if (employee == null)
+            {
+                return View("Create");
+            }
+            else
+            {
+                var applicationDbContext = _context.Employees.Where(c => c.ZipCode == employee.ZipCode);
+
+                return View(await applicationDbContext.ToListAsync());
+                //return view("index", employee);
+            }
 
 
-
-            var applicationDbContext = _context.Customers.Where(c => c.ZipCode == employee.ZipCode);
-
-            return View(await applicationDbContext.ToListAsync());
+            
 
         }
 
@@ -129,13 +137,13 @@ namespace Mowerman.Controllers
 
             //apply filtering to db with linq
 
-            var applicationDbContext = _context.Customers
+            var applicationDbContext = _context.Employees
 
-                .Where(c => c.MowDay == Day || c.ExtraMowDay == Day)
+                //.where(c => c.mowday == day || c.extramowday == day)
 
-                .Where(c => c.ZipCode == employee.ZipCode)
+                .Where(c => c.ZipCode == employee.ZipCode);
 
-                .Where(c => c.StartDate > selectedDate || c.EndDate < selectedDate);
+                //.where(c => c.startdate > selecteddate || c.enddate < selecteddate);
 
 
 
@@ -167,13 +175,13 @@ namespace Mowerman.Controllers
 
 
 
-            var customer = await _context.Customers
+            var employee = await _context.Employees
 
                 .Include(e => e.IdentityUser)
 
                 .FirstOrDefaultAsync(m => m.Id == id);
 
-            if (customer == null)
+            if (employee == null)
 
             {
 
@@ -183,7 +191,7 @@ namespace Mowerman.Controllers
 
 
 
-            return View(customer);
+            return View(employee);
 
         }
 
@@ -283,19 +291,19 @@ namespace Mowerman.Controllers
 
 
 
-            var customer = await _context.Customers.FindAsync(id);
+            //var employee = await _context.employees.findasync(id);
 
-            if (customer == null)
+            //if (employee == null)
 
-            {
+            //{
 
-                return NotFound();
+            //    return notfound();
 
-            }
+            //}
 
             ViewData["IdentityUserId"] = new SelectList(_context.Users, "Id", "Id", employee.IdentityUserId);
 
-            return View(customer);
+            return View(employee);
 
         }
 
@@ -319,7 +327,7 @@ namespace Mowerman.Controllers
 
             var employee = _context.Employees.Where(c => c.IdentityUserId == userId).SingleOrDefault();
 
-            customer = _context.Customers.Single(m => m.Id == id);
+            employee = _context.Employees.Single(m => m.Id == id);
 
 
 
@@ -452,6 +460,20 @@ namespace Mowerman.Controllers
         {
 
             return _context.Employees.Any(e => e.Id == id);
+
+        }
+        public IActionResult TimeClock()
+        {
+            TimeClock timeClock = new TimeClock();
+
+            return View(timeClock);
+        }
+        [HttpPost]
+        public IActionResult TimeClock(TimeClock timeClock)
+        {
+            _context.TimeClock.Add(timeClock);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
 
         }
 

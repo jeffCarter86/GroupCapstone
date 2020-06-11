@@ -10,8 +10,8 @@ using Mowerman.Data;
 namespace Mowerman.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200609211537_UpdatedExtraMow")]
-    partial class UpdatedExtraMow
+    [Migration("20200611191439_PortTimeClockToEmployee")]
+    partial class PortTimeClockToEmployee
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -50,22 +50,22 @@ namespace Mowerman.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "87ae5b69-51f1-4858-acb3-002520b099f1",
-                            ConcurrencyStamp = "8e9237ab-c164-4420-826b-161aac3abce5",
+                            Id = "e6cad703-dc33-4648-a872-8d3b18157550",
+                            ConcurrencyStamp = "44ed3011-284b-4bc1-97b7-f07fb726ee7f",
                             Name = "Customer",
                             NormalizedName = "Customer"
                         },
                         new
                         {
-                            Id = "c325c8bb-34f5-4c0d-8528-bedacce8eae9",
-                            ConcurrencyStamp = "17508ac6-d5eb-4702-b352-e669897c75a0",
+                            Id = "eae6d034-0f39-4411-9d99-7d4a2ffe1346",
+                            ConcurrencyStamp = "c24ab697-f155-49b2-8e90-11732c9e1439",
                             Name = "Employee",
                             NormalizedName = "Employee"
                         },
                         new
                         {
-                            Id = "9383383f-fde0-408d-b4f7-c088ceb8e7f2",
-                            ConcurrencyStamp = "576fd538-3eda-4f31-82c1-bffd0f2522de",
+                            Id = "0744940d-711c-41eb-a1a3-6af13a0dfaa4",
+                            ConcurrencyStamp = "c0d000c9-5dac-48e1-bb80-0c2b0e02dc17",
                             Name = "Operation",
                             NormalizedName = "Operation"
                         });
@@ -302,14 +302,29 @@ namespace Mowerman.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<DateTime?>("ClockIn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("ClockOut")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("Date")
+                        .HasColumnType("datetime2");
+
                     b.Property<string>("IdentityUserId")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("JobAddress")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Name")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int?>("OperationId")
                         .HasColumnType("int");
+
+                    b.Property<string>("Team")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ZipCode")
                         .IsRequired()
@@ -346,6 +361,37 @@ namespace Mowerman.Migrations
                     b.HasIndex("IdentityUserId");
 
                     b.ToTable("Operations");
+                });
+
+            modelBuilder.Entity("Mowerman.Models.TimeClock", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("ClockIn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("ClockOut")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("JobAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Team")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ZipCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TimeClock");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

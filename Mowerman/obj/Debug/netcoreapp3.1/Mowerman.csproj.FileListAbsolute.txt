@@ -983,3 +983,6 @@ C:\Users\uglym\OneDrive\Desktop\school\week9\projects\GroupCapstone\Mowerman\obj
 C:\Users\uglym\OneDrive\Desktop\school\week9\projects\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.dll
 C:\Users\uglym\OneDrive\Desktop\school\week9\projects\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.pdb
 C:\Users\uglym\OneDrive\Desktop\school\week9\projects\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.genruntimeconfig.cache
+C:\Users\david\Desktop\devCodeCamp\Group Capstone\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Razor\Views\Employees\TimeClock.cshtml.g.cs
+C:\Users\david\Desktop\devCodeCamp\Group Capstone\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Razor\Views\Operations\Filter.cshtml.g.cs
+C:\Users\david\Desktop\devCodeCamp\Group Capstone\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_EmployeeView.cshtml.g.cs
