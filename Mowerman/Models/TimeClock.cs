@@ -10,7 +10,9 @@ namespace Mowerman.Models
 {
     public class TimeClock
     {
-        
+        [Display(Name = "Team")]
+        public string Team { get; set; }
+
         [Display(Name = "Job Address")]
         public string JobAddress { get; set; }
 
@@ -28,6 +30,11 @@ namespace Mowerman.Models
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:HH:mm}", ApplyFormatInEditMode = true)]
         public DateTime? ClockOut { get; set; }
+
+        [Display(Name = "Current Date")]
+        [DataType(DataType.Date)]
+        [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
+        public DateTime? Date { get; set; }
 
 
 
