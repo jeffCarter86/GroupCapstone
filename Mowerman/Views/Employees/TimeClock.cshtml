@@ -57,8 +57,8 @@
         <script type="text/javascript">
             function calculate() {
 
-                var date1 = document.TimeClock.ClockIn.value;
-                var date2 = document.TimeClock.ClockOut.value;
+                var date1 = new Date(document.TimeClock.ClockIn.value);
+                var date2 = new Date(document.TimeClock.ClockOut.value);
                 var diff = date2.getTime() - date1.getTime();
                 var SpanTime = Math.floor(diff / (1000 * 60));
                 diff -= mins * (1000 * 60);
