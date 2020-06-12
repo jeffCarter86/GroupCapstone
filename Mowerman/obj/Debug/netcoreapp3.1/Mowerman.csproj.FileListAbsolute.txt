@@ -201,3 +201,4 @@ C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\staticweba
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.dll
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.pdb
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.genruntimeconfig.cache
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.csprojAssemblyReference.cache

@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Mowerman.Migrations
 {
-    public partial class Initial : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -58,7 +58,7 @@ namespace Mowerman.Migrations
                     ClockIn = table.Column<DateTime>(nullable: true),
                     ClockOut = table.Column<DateTime>(nullable: true),
                     Date = table.Column<DateTime>(nullable: true),
-                    Duration = table.Column<DateTime>(nullable: true)
+                    Duration = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
@@ -254,17 +254,17 @@ namespace Mowerman.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "bdb361f8-e884-4518-8b31-979a683d981d", "767e0096-d782-4939-b739-410525d8af50", "Customer", "Customer" });
+                values: new object[] { "889ec6c6-7d44-4d3c-b161-ff27576e8c5f", "2436aee6-e3b2-4ed4-8e05-dee2531687ac", "Customer", "Customer" });
 
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "528361e8-8f0a-4629-a0e5-04e9744d4572", "50e2d056-1844-4575-a19e-a0e1a16bb159", "Employee", "Employee" });
+                values: new object[] { "54e58a57-a53b-4937-be5e-d8e87297feab", "ab4f23af-28dc-4ea9-a1ba-c78dcf16e8fc", "Employee", "Employee" });
 
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "e8ff1b4b-b348-47d4-b96c-f43500971690", "1d9cb2fd-fa7f-47fe-8bb3-c6d972994c49", "Operation", "Operation" });
+                values: new object[] { "1ea283dc-af7e-4bcd-8da0-5aef8fd7c364", "f715fc97-b622-4aee-b9e0-679a5dd6c756", "Operation", "Operation" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
