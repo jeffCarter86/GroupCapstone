@@ -467,6 +467,7 @@ namespace Mowerman.Controllers
         [HttpPost]
         public IActionResult TimeClock(TimeClock timeClock)
         {
+
             _context.TimeClock.Add(timeClock);          
             _context.SaveChanges();
             return RedirectToAction("Index");

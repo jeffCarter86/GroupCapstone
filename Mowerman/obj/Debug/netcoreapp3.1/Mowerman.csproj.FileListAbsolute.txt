@@ -985,6 +985,7 @@ C:\Users\uglym\OneDrive\Desktop\school\week9\projects\GroupCapstone\Mowerman\obj
 C:\Users\david\Desktop\devCodeCamp\Group Capstone\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Razor\Views\Employees\TimeClock.cshtml.g.cs
 C:\Users\david\Desktop\devCodeCamp\Group Capstone\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Razor\Views\Operations\Filter.cshtml.g.cs
 C:\Users\david\Desktop\devCodeCamp\Group Capstone\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Razor\Views\Shared\_EmployeeView.cshtml.g.cs
+<<<<<<< HEAD
 C:\Users\uglym\OneDrive\Desktop\GroupCapstone-master\Mowerman\bin\Debug\netcoreapp3.1\appsettings.Development.json
 C:\Users\uglym\OneDrive\Desktop\GroupCapstone-master\Mowerman\bin\Debug\netcoreapp3.1\appsettings.json
 C:\Users\uglym\OneDrive\Desktop\GroupCapstone-master\Mowerman\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
@@ -1189,3 +1190,5 @@ C:\Users\uglym\OneDrive\Desktop\GroupCapstone-master\Mowerman\obj\Debug\netcorea
 C:\Users\uglym\OneDrive\Desktop\GroupCapstone-master\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.dll
 C:\Users\uglym\OneDrive\Desktop\GroupCapstone-master\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.pdb
 C:\Users\uglym\OneDrive\Desktop\GroupCapstone-master\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.genruntimeconfig.cache
+=======
+>>>>>>> 53faf30dd61849696589a4cca1bfd8f1d2507d91
