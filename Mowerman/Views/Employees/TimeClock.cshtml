@@ -30,42 +30,43 @@
             </div>
             <div class="form-group">
                 <label asp-for="ClockIn" class="control-label"></label>
-                <input asp-for="ClockIn" class="form-control" type="datetime" name="ClockIn" id="clockin" />
+                <input asp-for="ClockIn" class="form-control" id="ClockIn" />
                 <span asp-validation-for="ClockIn" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ClockOut" class="control-label"></label>
-                <input asp-for="ClockOut" class="form-control" type="datetime" name="ClockOut" id="clockout" onchange="calculate();" />
+                <input asp-for="ClockOut" class="form-control"  />
                 <span asp-validation-for="ClockOut" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Date" class="control-label"></label>
-                <input asp-for="Date" class="form-control" />
+                <input asp-for="Date" class="form-control" onchange="calculate();" />
                 <span asp-validation-for="Date" class="text-danger"></span>
             </div>
 
             <div class="form-group">
                 <label asp-for="Duration" class="control-label"></label>
-                <input asp-for="Duration" class="form-control" name="Duration" id="duration" />
+                <input asp-for="Duration" class="form-control" name="Duration" id="Duration" />
                 <span asp-validation-for="Duration" class="text-danger"></span>
             </div>
-
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
         <script type="text/javascript">
             function calculate() {
+                let date = (document.getElementById("Date").value)
+                let dt1 = new Date(date + "," + document.getElementById("ClockIn").value);
+                let dt2 = new Date(date + "," + document.getElementById("ClockOut").value);
+                console.log(dt1);
+                console.log(dt2);
+                var diff = (dt2.getTime() - dt1.getTime()) / 1000;
+                diff /= 60;
+                let output = Math.abs(Math.round(diff));
+                document.getElementById("Duration").value = output;
+            }
 
-                var date1 = new Date(document.TimeClock.ClockIn.value);
-                var date2 = new Date(document.TimeClock.ClockOut.value);
-                var diff = date2.getTime() - date1.getTime();
-                var SpanTime = Math.floor(diff / (1000 * 60));
-                diff -= mins * (1000 * 60);
-               
-                document.TimeClock.Duration.value = SpanTime;
-
-            }   
+           
 
         </script>
     </div>

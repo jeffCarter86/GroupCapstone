@@ -10,7 +10,7 @@ using Mowerman.Data;
 namespace Mowerman.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200612163835_Initial")]
+    [Migration("20200612200629_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -50,22 +50,22 @@ namespace Mowerman.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "bdb361f8-e884-4518-8b31-979a683d981d",
-                            ConcurrencyStamp = "767e0096-d782-4939-b739-410525d8af50",
+                            Id = "36c20483-d571-49ca-bb65-357c95885414",
+                            ConcurrencyStamp = "c2d38288-131a-4501-b4d1-40d272666873",
                             Name = "Customer",
                             NormalizedName = "Customer"
                         },
                         new
                         {
-                            Id = "528361e8-8f0a-4629-a0e5-04e9744d4572",
-                            ConcurrencyStamp = "50e2d056-1844-4575-a19e-a0e1a16bb159",
+                            Id = "a08412c2-6ba6-4598-b195-6415b8fe7f5a",
+                            ConcurrencyStamp = "d315379e-74f9-41d5-978d-c4599fed92cb",
                             Name = "Employee",
                             NormalizedName = "Employee"
                         },
                         new
                         {
-                            Id = "e8ff1b4b-b348-47d4-b96c-f43500971690",
-                            ConcurrencyStamp = "1d9cb2fd-fa7f-47fe-8bb3-c6d972994c49",
+                            Id = "c3b3e826-9d17-47a4-9e4f-572b4f62ed37",
+                            ConcurrencyStamp = "0ceb9f66-7293-473b-98ca-0a193a61f0a1",
                             Name = "Operation",
                             NormalizedName = "Operation"
                         });
@@ -364,8 +364,8 @@ namespace Mowerman.Migrations
                     b.Property<DateTime?>("Date")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime?>("Duration")
-                        .HasColumnType("datetime2");
+                    b.Property<int>("Duration")
+                        .HasColumnType("int");
 
                     b.Property<string>("JobAddress")
                         .HasColumnType("nvarchar(max)");

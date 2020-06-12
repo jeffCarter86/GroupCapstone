@@ -43,7 +43,7 @@ namespace Mowerman.Models
 
         [Display(Name = "Job Duration")]
         
-        public DateTime? Duration { get; set; }
+        public int Duration { get; set; }
 
 
     }
