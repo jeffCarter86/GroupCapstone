@@ -48,22 +48,22 @@ namespace Mowerman.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "6fea5978-8790-458e-ae22-6bdecc24aa3e",
-                            ConcurrencyStamp = "26bbff2a-a67e-4190-9882-59d3d4a2d00b",
+                            Id = "919b3348-1b0c-4a90-b1b9-2a2d54486244",
+                            ConcurrencyStamp = "db224c4e-a0d6-409c-8ed5-6deca03f960f",
                             Name = "Customer",
                             NormalizedName = "Customer"
                         },
                         new
                         {
-                            Id = "58a1fca5-fadd-4ee8-9ca1-b87ed459841f",
-                            ConcurrencyStamp = "b8bf0f4d-7ba3-4895-81fb-0f13b06c4622",
+                            Id = "415c9a9f-23ee-4a80-968a-149c9d9c492f",
+                            ConcurrencyStamp = "df8a64eb-0de7-4411-8620-551c01f1dbfe",
                             Name = "Employee",
                             NormalizedName = "Employee"
                         },
                         new
                         {
-                            Id = "225757e5-d172-44cc-af13-e916d5e405de",
-                            ConcurrencyStamp = "4f0284e7-bc3e-48a6-a93e-01c4d6ecdfbe",
+                            Id = "a55a05b4-e967-40dc-b05f-746acb8b2d3e",
+                            ConcurrencyStamp = "73af68c4-b200-4a29-aa41-6eb965a00715",
                             Name = "Operation",
                             NormalizedName = "Operation"
                         });
@@ -360,6 +360,9 @@ namespace Mowerman.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("Duration")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("JobAddress")

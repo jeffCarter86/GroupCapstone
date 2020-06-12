@@ -10,8 +10,8 @@ using Mowerman.Data;
 namespace Mowerman.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200609211537_UpdatedExtraMow")]
-    partial class UpdatedExtraMow
+    [Migration("20200612152729_initial")]
+    partial class initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -50,22 +50,22 @@ namespace Mowerman.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "87ae5b69-51f1-4858-acb3-002520b099f1",
-                            ConcurrencyStamp = "8e9237ab-c164-4420-826b-161aac3abce5",
+                            Id = "919b3348-1b0c-4a90-b1b9-2a2d54486244",
+                            ConcurrencyStamp = "db224c4e-a0d6-409c-8ed5-6deca03f960f",
                             Name = "Customer",
                             NormalizedName = "Customer"
                         },
                         new
                         {
-                            Id = "c325c8bb-34f5-4c0d-8528-bedacce8eae9",
-                            ConcurrencyStamp = "17508ac6-d5eb-4702-b352-e669897c75a0",
+                            Id = "415c9a9f-23ee-4a80-968a-149c9d9c492f",
+                            ConcurrencyStamp = "df8a64eb-0de7-4411-8620-551c01f1dbfe",
                             Name = "Employee",
                             NormalizedName = "Employee"
                         },
                         new
                         {
-                            Id = "9383383f-fde0-408d-b4f7-c088ceb8e7f2",
-                            ConcurrencyStamp = "576fd538-3eda-4f31-82c1-bffd0f2522de",
+                            Id = "a55a05b4-e967-40dc-b05f-746acb8b2d3e",
+                            ConcurrencyStamp = "73af68c4-b200-4a29-aa41-6eb965a00715",
                             Name = "Operation",
                             NormalizedName = "Operation"
                         });
@@ -346,6 +346,40 @@ namespace Mowerman.Migrations
                     b.HasIndex("IdentityUserId");
 
                     b.ToTable("Operations");
+                });
+
+            modelBuilder.Entity("Mowerman.Models.TimeClock", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime?>("ClockIn")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("ClockOut")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("Duration")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("JobAddress")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Team")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ZipCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("TimeClock");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

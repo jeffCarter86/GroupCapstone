@@ -6,6 +6,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
+
 namespace Mowerman.Models
 {
     public class TimeClock
@@ -26,12 +27,12 @@ namespace Mowerman.Models
         public string ZipCode { get; set; }
         
         [Display(Name = "Clock-In Time")]
-        [DataType(DataType.Date)]
+        [DataType(DataType.Time)]
         [DisplayFormat(DataFormatString = "{0:HH:mm}", ApplyFormatInEditMode = true)]
         public DateTime? ClockIn { get; set; }
 
         [Display(Name = "Clock-Out Time")]
-        [DataType(DataType.Date)]
+        [DataType(DataType.Time)]
         [DisplayFormat(DataFormatString = "{0:HH:mm}", ApplyFormatInEditMode = true)]
         public DateTime? ClockOut { get; set; }
 
@@ -39,6 +40,10 @@ namespace Mowerman.Models
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime? Date { get; set; }
+
+        [Display(Name = "Job Duration")]
+        
+        public DateTime? Duration { get; set; }
 
 
     }

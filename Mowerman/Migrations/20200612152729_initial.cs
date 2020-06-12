@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Mowerman.Migrations
 {
-    public partial class UpdatedExtraMow : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -44,6 +44,25 @@ namespace Mowerman.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_AspNetUsers", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TimeClock",
+                columns: table => new
+                {
+                    Id = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Team = table.Column<string>(nullable: true),
+                    JobAddress = table.Column<string>(nullable: true),
+                    ZipCode = table.Column<string>(nullable: false),
+                    ClockIn = table.Column<DateTime>(nullable: true),
+                    ClockOut = table.Column<DateTime>(nullable: true),
+                    Date = table.Column<DateTime>(nullable: true),
+                    Duration = table.Column<DateTime>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TimeClock", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
@@ -235,17 +254,17 @@ namespace Mowerman.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "87ae5b69-51f1-4858-acb3-002520b099f1", "8e9237ab-c164-4420-826b-161aac3abce5", "Customer", "Customer" });
+                values: new object[] { "919b3348-1b0c-4a90-b1b9-2a2d54486244", "db224c4e-a0d6-409c-8ed5-6deca03f960f", "Customer", "Customer" });
 
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "c325c8bb-34f5-4c0d-8528-bedacce8eae9", "17508ac6-d5eb-4702-b352-e669897c75a0", "Employee", "Employee" });
+                values: new object[] { "415c9a9f-23ee-4a80-968a-149c9d9c492f", "df8a64eb-0de7-4411-8620-551c01f1dbfe", "Employee", "Employee" });
 
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "9383383f-fde0-408d-b4f7-c088ceb8e7f2", "576fd538-3eda-4f31-82c1-bffd0f2522de", "Operation", "Operation" });
+                values: new object[] { "a55a05b4-e967-40dc-b05f-746acb8b2d3e", "73af68c4-b200-4a29-aa41-6eb965a00715", "Operation", "Operation" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -329,6 +348,9 @@ namespace Mowerman.Migrations
 
             migrationBuilder.DropTable(
                 name: "Employees");
+
+            migrationBuilder.DropTable(
+                name: "TimeClock");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");

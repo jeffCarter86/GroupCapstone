@@ -8963,11 +8963,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\uglym\\OneDrive\\Desktop\\school\\week9\\projects\\GroupCapstone\\Mowerman\\Mowerman.csproj",
+      "projectUniqueName": "C:\\Users\\uglym\\OneDrive\\Desktop\\GroupCapstone-master\\Mowerman\\Mowerman.csproj",
       "projectName": "Mowerman",
-      "projectPath": "C:\\Users\\uglym\\OneDrive\\Desktop\\school\\week9\\projects\\GroupCapstone\\Mowerman\\Mowerman.csproj",
+      "projectPath": "C:\\Users\\uglym\\OneDrive\\Desktop\\GroupCapstone-master\\Mowerman\\Mowerman.csproj",
       "packagesPath": "C:\\Users\\uglym\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\uglym\\OneDrive\\Desktop\\school\\week9\\projects\\GroupCapstone\\Mowerman\\obj\\",
+      "outputPath": "C:\\Users\\uglym\\OneDrive\\Desktop\\GroupCapstone-master\\Mowerman\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"
