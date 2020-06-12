@@ -48,22 +48,52 @@ namespace Mowerman.Migrations
                     b.HasData(
                         new
                         {
+<<<<<<< HEAD
                             Id = "ee20e293-e7a2-47d8-b8d7-ac7901af4f96",
                             ConcurrencyStamp = "3b0ff5c3-81a5-48cd-b64f-03482fef813e",
+=======
+<<<<<<< HEAD
+                            Id = "919b3348-1b0c-4a90-b1b9-2a2d54486244",
+                            ConcurrencyStamp = "db224c4e-a0d6-409c-8ed5-6deca03f960f",
+=======
+                            Id = "e6cad703-dc33-4648-a872-8d3b18157550",
+                            ConcurrencyStamp = "44ed3011-284b-4bc1-97b7-f07fb726ee7f",
+>>>>>>> 53faf30dd61849696589a4cca1bfd8f1d2507d91
+>>>>>>> 6496dd77bfd4726acc5d9388023f77d874c8a798
                             Name = "Customer",
                             NormalizedName = "Customer"
                         },
                         new
                         {
+<<<<<<< HEAD
                             Id = "1d493377-d1d1-4832-94d9-4761baeaf2e3",
                             ConcurrencyStamp = "144c1db3-d6c5-411b-a641-5f6fc3d6d947",
+=======
+<<<<<<< HEAD
+                            Id = "415c9a9f-23ee-4a80-968a-149c9d9c492f",
+                            ConcurrencyStamp = "df8a64eb-0de7-4411-8620-551c01f1dbfe",
+=======
+                            Id = "eae6d034-0f39-4411-9d99-7d4a2ffe1346",
+                            ConcurrencyStamp = "c24ab697-f155-49b2-8e90-11732c9e1439",
+>>>>>>> 53faf30dd61849696589a4cca1bfd8f1d2507d91
+>>>>>>> 6496dd77bfd4726acc5d9388023f77d874c8a798
                             Name = "Employee",
                             NormalizedName = "Employee"
                         },
                         new
                         {
+<<<<<<< HEAD
                             Id = "8b2479f3-dba5-4cfd-9caa-b862ba4f3ab1",
                             ConcurrencyStamp = "b43de5c4-7573-4066-bbd0-3c1162ea3412",
+=======
+<<<<<<< HEAD
+                            Id = "a55a05b4-e967-40dc-b05f-746acb8b2d3e",
+                            ConcurrencyStamp = "73af68c4-b200-4a29-aa41-6eb965a00715",
+=======
+                            Id = "0744940d-711c-41eb-a1a3-6af13a0dfaa4",
+                            ConcurrencyStamp = "c0d000c9-5dac-48e1-bb80-0c2b0e02dc17",
+>>>>>>> 53faf30dd61849696589a4cca1bfd8f1d2507d91
+>>>>>>> 6496dd77bfd4726acc5d9388023f77d874c8a798
                             Name = "Operation",
                             NormalizedName = "Operation"
                         });
@@ -360,6 +390,9 @@ namespace Mowerman.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("Date")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("Duration")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("JobAddress")

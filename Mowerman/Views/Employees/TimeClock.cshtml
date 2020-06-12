@@ -8,7 +8,9 @@
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="TimeClock">
+
+        <form asp-action="TimeClock" name="TimeClock">
+
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
             <div class="form-group">
@@ -28,12 +30,12 @@
             </div>
             <div class="form-group">
                 <label asp-for="ClockIn" class="control-label"></label>
-                <input asp-for="ClockIn" class="form-control" />
+                <input asp-for="ClockIn" class="form-control" type="datetime" name="ClockIn" id="clockin" />
                 <span asp-validation-for="ClockIn" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="ClockOut" class="control-label"></label>
-                <input asp-for="ClockOut" class="form-control" />
+                <input asp-for="ClockOut" class="form-control" type="datetime" name="ClockOut" id="clockout" onchange="calculate();" />
                 <span asp-validation-for="ClockOut" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -41,10 +43,31 @@
                 <input asp-for="Date" class="form-control" />
                 <span asp-validation-for="Date" class="text-danger"></span>
             </div>
+
+            <div class="form-group">
+                <label asp-for="Duration" class="control-label"></label>
+                <input asp-for="Duration" class="form-control" name="Duration" id="duration" />
+                <span asp-validation-for="Duration" class="text-danger"></span>
+            </div>
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
+        <script type="text/javascript">
+            function calculate() {
+
+                var date1 = new Date(document.TimeClock.ClockIn.value);
+                var date2 = new Date(document.TimeClock.ClockOut.value);
+                var diff = date2.getTime() - date1.getTime();
+                var SpanTime = Math.floor(diff / (1000 * 60));
+                diff -= mins * (1000 * 60);
+               
+                document.TimeClock.Duration.value = SpanTime;
+
+            }   
+
+        </script>
     </div>
 </div>
 <div>

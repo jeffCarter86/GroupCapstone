@@ -41,6 +41,10 @@ namespace Mowerman.Models
         [DisplayFormat(DataFormatString = "{0:MM-dd-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime? Date { get; set; }
 
+        [Display(Name = "Job Duration")]
+        
+        public DateTime? Duration { get; set; }
+
 
     }
 }
