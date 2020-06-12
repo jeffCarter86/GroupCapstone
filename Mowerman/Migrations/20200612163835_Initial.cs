@@ -3,11 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Mowerman.Migrations
 {
-<<<<<<< HEAD:Mowerman/Migrations/20200612152729_initial.cs
-    public partial class initial : Migration
-=======
-    public partial class PortTimeClockToEmployee : Migration
->>>>>>> 53faf30dd61849696589a4cca1bfd8f1d2507d91:Mowerman/Migrations/20200611191439_PortTimeClockToEmployee.cs
+    public partial class Initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -61,12 +57,8 @@ namespace Mowerman.Migrations
                     ZipCode = table.Column<string>(nullable: false),
                     ClockIn = table.Column<DateTime>(nullable: true),
                     ClockOut = table.Column<DateTime>(nullable: true),
-<<<<<<< HEAD:Mowerman/Migrations/20200612152729_initial.cs
                     Date = table.Column<DateTime>(nullable: true),
                     Duration = table.Column<DateTime>(nullable: true)
-=======
-                    Date = table.Column<DateTime>(nullable: true)
->>>>>>> 53faf30dd61849696589a4cca1bfd8f1d2507d91:Mowerman/Migrations/20200611191439_PortTimeClockToEmployee.cs
                 },
                 constraints: table =>
                 {
@@ -239,11 +231,6 @@ namespace Mowerman.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(nullable: true),
                     ZipCode = table.Column<string>(nullable: false),
-                    Team = table.Column<string>(nullable: true),
-                    JobAddress = table.Column<string>(nullable: true),
-                    ClockIn = table.Column<DateTime>(nullable: true),
-                    ClockOut = table.Column<DateTime>(nullable: true),
-                    Date = table.Column<DateTime>(nullable: true),
                     IdentityUserId = table.Column<string>(nullable: true),
                     OperationId = table.Column<int>(nullable: true)
                 },
@@ -267,29 +254,17 @@ namespace Mowerman.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-<<<<<<< HEAD:Mowerman/Migrations/20200612152729_initial.cs
-                values: new object[] { "919b3348-1b0c-4a90-b1b9-2a2d54486244", "db224c4e-a0d6-409c-8ed5-6deca03f960f", "Customer", "Customer" });
-=======
-                values: new object[] { "e6cad703-dc33-4648-a872-8d3b18157550", "44ed3011-284b-4bc1-97b7-f07fb726ee7f", "Customer", "Customer" });
->>>>>>> 53faf30dd61849696589a4cca1bfd8f1d2507d91:Mowerman/Migrations/20200611191439_PortTimeClockToEmployee.cs
+                values: new object[] { "bdb361f8-e884-4518-8b31-979a683d981d", "767e0096-d782-4939-b739-410525d8af50", "Customer", "Customer" });
 
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-<<<<<<< HEAD:Mowerman/Migrations/20200612152729_initial.cs
-                values: new object[] { "415c9a9f-23ee-4a80-968a-149c9d9c492f", "df8a64eb-0de7-4411-8620-551c01f1dbfe", "Employee", "Employee" });
-=======
-                values: new object[] { "eae6d034-0f39-4411-9d99-7d4a2ffe1346", "c24ab697-f155-49b2-8e90-11732c9e1439", "Employee", "Employee" });
->>>>>>> 53faf30dd61849696589a4cca1bfd8f1d2507d91:Mowerman/Migrations/20200611191439_PortTimeClockToEmployee.cs
+                values: new object[] { "528361e8-8f0a-4629-a0e5-04e9744d4572", "50e2d056-1844-4575-a19e-a0e1a16bb159", "Employee", "Employee" });
 
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-<<<<<<< HEAD:Mowerman/Migrations/20200612152729_initial.cs
-                values: new object[] { "a55a05b4-e967-40dc-b05f-746acb8b2d3e", "73af68c4-b200-4a29-aa41-6eb965a00715", "Operation", "Operation" });
-=======
-                values: new object[] { "0744940d-711c-41eb-a1a3-6af13a0dfaa4", "c0d000c9-5dac-48e1-bb80-0c2b0e02dc17", "Operation", "Operation" });
->>>>>>> 53faf30dd61849696589a4cca1bfd8f1d2507d91:Mowerman/Migrations/20200611191439_PortTimeClockToEmployee.cs
+                values: new object[] { "e8ff1b4b-b348-47d4-b96c-f43500971690", "1d9cb2fd-fa7f-47fe-8bb3-c6d972994c49", "Operation", "Operation" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
