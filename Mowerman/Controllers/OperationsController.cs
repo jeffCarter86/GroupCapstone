@@ -11,6 +11,8 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Mowerman.Data;
 using Mowerman.Models;
+using System.Collections;
+using System.Web.Helpers;
 
 namespace Mowerman.Controllers
 {
@@ -446,6 +448,27 @@ namespace Mowerman.Controllers
 
             return _context.Operations.Any(e => e.Id == id);
 
+        }
+
+        public ActionResult JobeTimeChart()
+        {
+
+
+            ArrayList xValue = new ArrayList();
+
+            ArrayList yValue = new ArrayList();
+
+            var results = (from c in _context.TimeClock select c);
+
+            results.ToList().ForEach(rs => xValue.Add(rs.Team));
+            results.ToList().ForEach(rs => yValue.Add(rs.Duration));
+
+            new Chart(width: 600, height: 400, theme: ChartTheme.Vanilla3D)
+            .AddTitle("Time Worked per Job")
+           .AddSeries("Default", chartType: "column", xValue: xValue, yValues: yValue)
+                  .Write("bmp");
+
+            return null;
         }
 
     }
