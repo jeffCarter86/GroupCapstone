@@ -1,4 +1,3 @@
-C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.csprojAssemblyReference.cache
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.AssemblyInfoInputs.cache
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.AssemblyInfo.cs
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.csproj.CoreCompileInputs.cache
@@ -404,3 +403,15 @@ C:\Users\uglym\OneDrive\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\M
 C:\Users\uglym\OneDrive\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.pdb
 C:\Users\uglym\OneDrive\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.genruntimeconfig.cache
 C:\Users\uglym\OneDrive\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\ChartJS.Helpers.MVC.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\ChartJS.Helpers.MVC.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\Microsoft.Web.Helpers.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\System.Web.Razor.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\System.Web.Helpers.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\System.Web.WebPages.Deployment.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\System.Web.WebPages.Razor.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\System.Web.WebPages.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\WebMatrix.Data.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\WebMatrix.WebData.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Razor\Views\Operations\JobWork.cshtml.g.cs
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.csprojAssemblyReference.cache
