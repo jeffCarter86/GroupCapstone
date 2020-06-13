@@ -10,8 +10,8 @@ using Mowerman.Data;
 namespace Mowerman.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20200612200629_Initial")]
-    partial class Initial
+    [Migration("20200613164404_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -50,22 +50,22 @@ namespace Mowerman.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "36c20483-d571-49ca-bb65-357c95885414",
-                            ConcurrencyStamp = "c2d38288-131a-4501-b4d1-40d272666873",
+                            Id = "a5c431cf-88a3-4721-b9d2-7505e170f7ac",
+                            ConcurrencyStamp = "fd454ef6-70ff-4b85-877c-74a2ad8eb625",
                             Name = "Customer",
                             NormalizedName = "Customer"
                         },
                         new
                         {
-                            Id = "a08412c2-6ba6-4598-b195-6415b8fe7f5a",
-                            ConcurrencyStamp = "d315379e-74f9-41d5-978d-c4599fed92cb",
+                            Id = "000ae70f-dd19-4517-a7a5-36faf0a8507e",
+                            ConcurrencyStamp = "a491b9ce-12ed-4066-8a36-a48b96585270",
                             Name = "Employee",
                             NormalizedName = "Employee"
                         },
                         new
                         {
-                            Id = "c3b3e826-9d17-47a4-9e4f-572b4f62ed37",
-                            ConcurrencyStamp = "0ceb9f66-7293-473b-98ca-0a193a61f0a1",
+                            Id = "57db884a-4a0d-490a-97ef-710160377047",
+                            ConcurrencyStamp = "94ad12cf-13e3-4810-b9b0-e56c089324da",
                             Name = "Operation",
                             NormalizedName = "Operation"
                         });

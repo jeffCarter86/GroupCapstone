@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Mowerman.Migrations
 {
-    public partial class Initial : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -254,17 +254,17 @@ namespace Mowerman.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "36c20483-d571-49ca-bb65-357c95885414", "c2d38288-131a-4501-b4d1-40d272666873", "Customer", "Customer" });
+                values: new object[] { "a5c431cf-88a3-4721-b9d2-7505e170f7ac", "fd454ef6-70ff-4b85-877c-74a2ad8eb625", "Customer", "Customer" });
 
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "a08412c2-6ba6-4598-b195-6415b8fe7f5a", "d315379e-74f9-41d5-978d-c4599fed92cb", "Employee", "Employee" });
+                values: new object[] { "000ae70f-dd19-4517-a7a5-36faf0a8507e", "a491b9ce-12ed-4066-8a36-a48b96585270", "Employee", "Employee" });
 
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "c3b3e826-9d17-47a4-9e4f-572b4f62ed37", "0ceb9f66-7293-473b-98ca-0a193a61f0a1", "Operation", "Operation" });
+                values: new object[] { "57db884a-4a0d-490a-97ef-710160377047", "94ad12cf-13e3-4810-b9b0-e56c089324da", "Operation", "Operation" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
