@@ -16,6 +16,8 @@ namespace Mowerman.Models
 
         [Display(Name = "Mow Day")]
         public DayOfWeek? MowDay { get; set; }
+        [Display(Name = "Team")]
+        public int Team { get; set; }
 
         [Display(Name = "One-Time Extra Mow Day")]
         public DayOfWeek? ExtraMowDay { get; set; }
