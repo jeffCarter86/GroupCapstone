@@ -12,9 +12,9 @@ namespace Mowerman.Models
     {
 
         public int Id { get; set; }
-        [Display(Name = "Name")]
-        public int Team { get; set; }
         [Display(Name = "Team")]
+        public int Team { get; set; }
+        [Display(Name = "Name")]
         public string Name { get; set; }
 
         [Display(Name = "Zip Code")]

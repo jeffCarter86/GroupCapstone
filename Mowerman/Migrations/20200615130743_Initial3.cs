@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace Mowerman.Migrations
 {
-    public partial class init : Migration
+    public partial class Initial3 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -179,6 +179,7 @@ namespace Mowerman.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Name = table.Column<string>(nullable: true),
                     MowDay = table.Column<int>(nullable: true),
+                    Team = table.Column<int>(nullable: false),
                     ExtraMowDay = table.Column<int>(nullable: true),
                     Address = table.Column<string>(nullable: false),
                     State = table.Column<string>(nullable: true),
@@ -229,14 +230,22 @@ namespace Mowerman.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    Team = table.Column<int>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     ZipCode = table.Column<string>(nullable: false),
                     IdentityUserId = table.Column<string>(nullable: true),
+                    EmployeeId = table.Column<int>(nullable: true),
                     OperationId = table.Column<int>(nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Employees", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Employees_Employees_EmployeeId",
+                        column: x => x.EmployeeId,
+                        principalTable: "Employees",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Employees_AspNetUsers_IdentityUserId",
                         column: x => x.IdentityUserId,
@@ -254,17 +263,17 @@ namespace Mowerman.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "a5c431cf-88a3-4721-b9d2-7505e170f7ac", "fd454ef6-70ff-4b85-877c-74a2ad8eb625", "Customer", "Customer" });
+                values: new object[] { "b1a11c33-da5b-461a-af03-8bda72aaca4f", "63b98665-9584-4dac-9bbc-d1cfead42432", "Customer", "Customer" });
 
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "000ae70f-dd19-4517-a7a5-36faf0a8507e", "a491b9ce-12ed-4066-8a36-a48b96585270", "Employee", "Employee" });
+                values: new object[] { "9d029472-edbf-4956-aaae-a3b95778d9d6", "6cc38461-e434-44c4-88ef-c6f7c33f2de1", "Employee", "Employee" });
 
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "57db884a-4a0d-490a-97ef-710160377047", "94ad12cf-13e3-4810-b9b0-e56c089324da", "Operation", "Operation" });
+                values: new object[] { "3807ab1c-623e-456b-a7fc-e66afe33cad2", "a6444ec0-18fa-4847-83ab-0b63c190c6bd", "Operation", "Operation" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -309,6 +318,11 @@ namespace Mowerman.Migrations
                 name: "IX_Customers_IdentityUserId",
                 table: "Customers",
                 column: "IdentityUserId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Employees_EmployeeId",
+                table: "Employees",
+                column: "EmployeeId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Employees_IdentityUserId",

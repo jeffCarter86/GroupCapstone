@@ -219,7 +219,7 @@ namespace Mowerman.Controllers
 
         [ValidateAntiForgeryToken]
 
-        public async Task<IActionResult> Create([Bind("Id,Name,ZipCode,IdentityUserId")] Employee employee)
+        public async Task<IActionResult> Create([Bind("Id,Name,ZipCode,Team,IdentityUserId")] Employee employee)
 
         {
 
@@ -327,7 +327,7 @@ namespace Mowerman.Controllers
 
 
 
-            if (id != customer.Id)
+            if (id != employee.Id)
 
             {
 
@@ -383,7 +383,7 @@ namespace Mowerman.Controllers
 
             ViewData["IdentityUserId"] = new SelectList(_context.Users, "Id", "Id", customer.IdentityUserId);
 
-            return View(customer);
+            return RedirectToAction(nameof(Index));
 
 
 

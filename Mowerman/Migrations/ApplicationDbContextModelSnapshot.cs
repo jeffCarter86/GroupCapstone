@@ -15,7 +15,7 @@ namespace Mowerman.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.1.4")
+                .HasAnnotation("ProductVersion", "3.1.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
@@ -48,22 +48,22 @@ namespace Mowerman.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "a5c431cf-88a3-4721-b9d2-7505e170f7ac",
-                            ConcurrencyStamp = "fd454ef6-70ff-4b85-877c-74a2ad8eb625",
+                            Id = "b1a11c33-da5b-461a-af03-8bda72aaca4f",
+                            ConcurrencyStamp = "63b98665-9584-4dac-9bbc-d1cfead42432",
                             Name = "Customer",
                             NormalizedName = "Customer"
                         },
                         new
                         {
-                            Id = "000ae70f-dd19-4517-a7a5-36faf0a8507e",
-                            ConcurrencyStamp = "a491b9ce-12ed-4066-8a36-a48b96585270",
+                            Id = "9d029472-edbf-4956-aaae-a3b95778d9d6",
+                            ConcurrencyStamp = "6cc38461-e434-44c4-88ef-c6f7c33f2de1",
                             Name = "Employee",
                             NormalizedName = "Employee"
                         },
                         new
                         {
-                            Id = "57db884a-4a0d-490a-97ef-710160377047",
-                            ConcurrencyStamp = "94ad12cf-13e3-4810-b9b0-e56c089324da",
+                            Id = "3807ab1c-623e-456b-a7fc-e66afe33cad2",
+                            ConcurrencyStamp = "a6444ec0-18fa-4847-83ab-0b63c190c6bd",
                             Name = "Operation",
                             NormalizedName = "Operation"
                         });
@@ -282,6 +282,9 @@ namespace Mowerman.Migrations
                     b.Property<string>("State")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<int>("Team")
+                        .HasColumnType("int");
+
                     b.Property<string>("ZipCode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -300,6 +303,9 @@ namespace Mowerman.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
+                    b.Property<int?>("EmployeeId")
+                        .HasColumnType("int");
+
                     b.Property<string>("IdentityUserId")
                         .HasColumnType("nvarchar(450)");
 
@@ -309,11 +315,16 @@ namespace Mowerman.Migrations
                     b.Property<int?>("OperationId")
                         .HasColumnType("int");
 
+                    b.Property<int>("Team")
+                        .HasColumnType("int");
+
                     b.Property<string>("ZipCode")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("EmployeeId");
 
                     b.HasIndex("IdentityUserId");
 
@@ -440,6 +451,10 @@ namespace Mowerman.Migrations
 
             modelBuilder.Entity("Mowerman.Models.Employee", b =>
                 {
+                    b.HasOne("Mowerman.Models.Employee", null)
+                        .WithMany("Employees")
+                        .HasForeignKey("EmployeeId");
+
                     b.HasOne("Microsoft.AspNetCore.Identity.IdentityUser", "IdentityUser")
                         .WithMany()
                         .HasForeignKey("IdentityUserId");
