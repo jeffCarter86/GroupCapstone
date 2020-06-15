@@ -13,6 +13,7 @@ using Mowerman.Data;
 using Mowerman.Models;
 using System.Collections;
 using System.Web.Helpers;
+using Microsoft.ApplicationInsights.AspNetCore;
 
 namespace Mowerman.Controllers
 {
@@ -450,26 +451,35 @@ namespace Mowerman.Controllers
 
         }
 
-        public ActionResult JobeTimeChart()
+        public ActionResult JobWork()
         {
-
-
-            ArrayList xValue = new ArrayList();
-
-            ArrayList yValue = new ArrayList();
-
-            var results = (from c in _context.TimeClock select c);
-
-            results.ToList().ForEach(rs => xValue.Add(rs.Team));
-            results.ToList().ForEach(rs => yValue.Add(rs.Duration));
-
-            new Chart(width: 600, height: 400, theme: ChartTheme.Vanilla3D)
-            .AddTitle("Time Worked per Job")
-           .AddSeries("Default", chartType: "column", xValue: xValue, yValues: yValue)
-                  .Write("bmp");
-
-            return null;
+            var time = _context.TimeClock.Select(t => t).ToList();
+            var teams = time.Select(t => t.Team).Distinct();
+            var duration = time.Select(d => d.Duration);
+            ViewBag.TEAMS = teams;
+            ViewBag.Duration = duration;
+            return View();
         }
 
+        //public ActionResult BarChart()
+        //{
+        //    //  ArrayList xValue = new ArrayList();
+
+        //    //  ArrayList yValue = new ArrayList();
+
+        //    //  var results = (from c in _context.TimeClock select c);
+
+        //    //  results.ToList().ForEach(rs => xValue.Add(rs.Team));
+        //    //  results.ToList().ForEach(rs => yValue.Add(rs.Duration));
+
+        //    //  Chart chart = new Chart(width: 600, height: 400, theme: ChartTheme.Vanilla3D)
+        //    // .AddTitle("Time Worked per Job")
+        //    //.AddSeries("Default", chartType: "column", xValue: xValue, yValues: yValue)
+        //    //       .Write("bmp");
+        //    var time = _context.TimeClock.Select(m => m).ToList();
+
+        //    return;
+        //}
+        
     }
 }

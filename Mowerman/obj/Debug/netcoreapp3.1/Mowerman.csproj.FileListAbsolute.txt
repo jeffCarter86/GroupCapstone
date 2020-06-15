@@ -1,8 +1,5 @@
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.AssemblyInfoInputs.cache
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.AssemblyInfo.cs
-C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.csproj.CoreCompileInputs.cache
-C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.RazorAssemblyInfo.cache
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.RazorAssemblyInfo.cs
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.dll
@@ -415,3 +412,18 @@ C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\WebMatrix.
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\Microsoft.Web.Infrastructure.dll
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Razor\Views\Operations\JobWork.cshtml.g.cs
 C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.csprojAssemblyReference.cache
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\Microsoft.ApplicationInsights.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\Microsoft.ApplicationInsights.AspNetCore.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\Microsoft.AI.DependencyCollector.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\Microsoft.AI.EventCounterCollector.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\Microsoft.AI.WindowsServer.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DiagnosticAdapter.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Logging.ApplicationInsights.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\System.Diagnostics.PerformanceCounter.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Diagnostics.PerformanceCounter.dll
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.csproj.CoreCompileInputs.cache
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ledze\Desktop\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.MvcApplicationPartsAssemblyInfo.cache
