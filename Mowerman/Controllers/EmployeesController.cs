@@ -479,7 +479,9 @@ namespace Mowerman.Controllers
         }
         public IActionResult DailyCustomers()
         {
-            return View("DailyCustomers");
+            var today = DateTime.Today.DayOfWeek;
+            var customers = _context.Customers.Where(c => c.MowDay == today).ToList();
+            return View(customers);
         }
 
     }

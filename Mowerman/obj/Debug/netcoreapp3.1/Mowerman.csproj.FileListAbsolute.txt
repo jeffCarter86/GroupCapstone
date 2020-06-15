@@ -228,3 +228,4 @@ C:\Users\david\Desktop\devCodeCamp\Group Capstone\GroupCapstone\Mowerman\obj\Deb
 C:\Users\david\Desktop\devCodeCamp\Group Capstone\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.dll
 C:\Users\david\Desktop\devCodeCamp\Group Capstone\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.pdb
 C:\Users\david\Desktop\devCodeCamp\Group Capstone\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.genruntimeconfig.cache
+C:\Users\david\Desktop\devCodeCamp\Group Capstone\GroupCapstone\Mowerman\obj\Debug\netcoreapp3.1\Mowerman.csprojAssemblyReference.cache
