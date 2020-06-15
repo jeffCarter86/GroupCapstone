@@ -460,9 +460,7 @@ namespace Mowerman.Controllers
             ViewBag.Duration = duration;
             return View();
         }
-<<<<<<< HEAD
- 
-=======
+
         public IActionResult TeamEdit()
         {
             Employee team = new Employee();
@@ -504,6 +502,10 @@ namespace Mowerman.Controllers
                 .Include(c => c.Name);
             return View(await applicationDbContext.ToListAsync());
         }
->>>>>>> TeamEdit
+        public IActionResult Location()
+        {
+            return View("Location");
+        }
+
     }
 }
