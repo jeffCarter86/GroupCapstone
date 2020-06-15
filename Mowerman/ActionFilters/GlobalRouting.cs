@@ -30,6 +30,11 @@ namespace Mowerman.ActionFilters
                     context.Result = new RedirectToActionResult("Index",
                     "Employees", null);
                 }
+                else if (_claimsPrincipal.IsInRole("Operation"))
+                {
+                    context.Result = new RedirectToActionResult("Index",
+                    "Operations", null);
+                }
             }
         }
         public void OnActionExecuted(ActionExecutedContext context)
