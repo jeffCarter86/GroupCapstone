@@ -470,6 +470,46 @@ namespace Mowerman.Controllers
 
             return null;
         }
+        public IActionResult TeamEdit()
+        {
+            Employee team = new Employee();
 
+            return View(team);
+        }
+        [HttpPost]
+        public IActionResult TeamEdit(Employee Team)
+        {
+
+            _context.Employees.Update(Team);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+
+        }
+        public async Task<IActionResult> TeamList()
+
+        {
+
+            //Get employee
+            var userId = this.User.FindFirstValue(ClaimTypes.NameIdentifier);
+
+            var employee = _context.Employees.Where(c => c.IdentityUserId == userId).SingleOrDefault();
+
+            //apply filtering to db with linq
+
+            var applicationDbContext = _context.Employees
+                .Where(c => c.Team == employee.Team);
+            return View(await applicationDbContext.ToListAsync());
+
+
+
+        }
+        // GET: Employee
+        public async Task<IActionResult> EmployList()
+        {
+            var applicationDbContext = _context.Employees
+
+                .Include(c => c.Name);
+            return View(await applicationDbContext.ToListAsync());
+        }
     }
 }
