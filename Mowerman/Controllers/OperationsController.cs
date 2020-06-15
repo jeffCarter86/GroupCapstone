@@ -460,26 +460,6 @@ namespace Mowerman.Controllers
             ViewBag.Duration = duration;
             return View();
         }
-
-        //public ActionResult BarChart()
-        //{
-        //    //  ArrayList xValue = new ArrayList();
-
-        //    //  ArrayList yValue = new ArrayList();
-
-        //    //  var results = (from c in _context.TimeClock select c);
-
-        //    //  results.ToList().ForEach(rs => xValue.Add(rs.Team));
-        //    //  results.ToList().ForEach(rs => yValue.Add(rs.Duration));
-
-        //    //  Chart chart = new Chart(width: 600, height: 400, theme: ChartTheme.Vanilla3D)
-        //    // .AddTitle("Time Worked per Job")
-        //    //.AddSeries("Default", chartType: "column", xValue: xValue, yValues: yValue)
-        //    //       .Write("bmp");
-        //    var time = _context.TimeClock.Select(m => m).ToList();
-
-        //    return;
-        //}
-        
+ 
     }
 }

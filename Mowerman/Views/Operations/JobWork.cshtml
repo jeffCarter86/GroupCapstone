@@ -3,89 +3,58 @@
 @{
     ViewData["Title"] = "JobWork";
 }
-<head>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
 
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-</head>
 
-   <div class="container">
-      <canvas id="myChart"></canvas>
-   </div>
+<div class="container">
+    <canvas id="myChart"></canvas>
+</div>
 
 
 <script>
     var teams = @Html.Raw(Json.Serialize(ViewBag.TEAMS));
     var minutes = @Html.Raw(Json.Serialize(ViewBag.Duration));
-    @*var teams = [];
-    var data = [];
-    $.ajax({
-        type: "GET",
-        dataType: "json",
-        contentType: "application/json",
-        url: "@Url.Action("BarChart", "Operations")",
-        success: function (data) {
-            $.each(data, function (index, value) {
-                teams = $(value.team)
-                data = $(value.duration);
-              
-            })
-            console.log(teams);
-        }
-    })*@
-    @*var teams = [];
-    var minutes = [];
-   
-    @foreach(var team in Model)
-    {
-        <text>
-       var tPlace = team.Team;
-       var minPlace = team.Duration;
-
-    teams.push(tPlace);
-    teams.push(minPlace);
-    </text>
-    }*@
-    let ctx = getElementById("myChart").getContext("2D");
-    let myChart = new Chart(ctx, {
-        type: "bar",
-        data: {
-            labels: [teams],
-            datasets: [{
-                labels: "Duration of Job",
-                data: minutes
-            ,
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.2)',
-                'rgba(54, 162, 235, 0.2)',
-                'rgba(255, 206, 86, 0.2)',
-                'rgba(75, 192, 192, 0.2)',
-                'rgba(153, 102, 255, 0.2)',
-                'rgba(255, 159, 64, 0.2)'
-            ],
-            borderColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
-            borderWidth: 1
-        }]
-    },
-        options: {
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
+    window.onload = function populateChart() {
+        let ctx = document.getElementById('myChart').getContext('2d');
+        let myChart = new Chart(ctx, {
+            type: "bar",
+            data: {
+                labels: [teams],
+                datasets: [{
+                    labels: "Duration of Job",
+                    data: minutes
+                    ,
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(255, 206, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(255, 159, 64, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgba(255, 99, 132, 1)',
+                        'rgba(54, 162, 235, 1)',
+                        'rgba(255, 206, 86, 1)',
+                        'rgba(75, 192, 192, 1)',
+                        'rgba(153, 102, 255, 1)',
+                        'rgba(255, 159, 64, 1)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true
+                        }
+                    }]
                 }
-            }]
-        }
+            }
+        });
     }
-    });
 
-    function getData() {
-
-    }
 </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
