@@ -12,8 +12,9 @@ namespace Mowerman.Models
     {
 
         public int Id { get; set; }
-
         [Display(Name = "Name")]
+        public int Team { get; set; }
+        [Display(Name = "Team")]
         public string Name { get; set; }
 
         [Display(Name = "Zip Code")]
@@ -46,5 +47,6 @@ namespace Mowerman.Models
 
         [NotMapped]
         public IEnumerable<Customer> Customers { get; set; }
+        public IEnumerable<Employee> Employees { get; set; }
     }
 }
