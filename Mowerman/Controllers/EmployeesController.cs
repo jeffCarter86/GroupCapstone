@@ -473,6 +473,14 @@ namespace Mowerman.Controllers
             return RedirectToAction("Index");
 
         }
+        public IActionResult Location()
+        {
+            return View("Location");
+        }
+        public IActionResult DailyCustomers()
+        {
+            return View("DailyCustomers");
+        }
 
     }
 
