@@ -30,7 +30,8 @@
         </style>
     </head>
     <body>
-
+        <div class="container">
+            <div class="row">
 
         <h1>Today's Services</h1>
 
@@ -231,7 +232,20 @@
             </tbody>
 
         </table>
-
+        </div>
+            <div class="row">
+                <div class="col">
+                    <button type="button" onclick="checkWind()" class="btn btn-danger weatherbutton">Check Weather conditions</button>
+                    <h2>Weather conditions for your area.</h2>
+                    <span><b>Temperature: </b></span><span id="main_temp"></span><span id="main_temp_unit"></span><br />
+                    <span><b>Wind speed: </b></span><span id="wind_speed"></span> <span id="wind_speed_unit"></span><br />
+                    <span><b>Wind direction: </b></span><span id="wind_direction"></span><span id="wind_degree_unit"></span><br />
+                    <span><b>Current conditions: </b></span><span id="weather_conditions"></span>
+                </div>
+                <div class="col">
+                    <input type="button" value="See Work Efficiency" class="btn btn-secondary" onclick="location.href='@Url.Action("JobWork", "Operations")'" />
+                </div>
+       </div>
         <script>
         function checkWind() {
             var settings = {
@@ -254,12 +268,6 @@
                 });
         }
         </script>
-        <button type="button" onclick="checkWind()" class="btn btn-danger weatherbutton">Check Weather conditions</button>
-        <h2>Weather conditions for your area.</h2>
-        <span><b>Temperature: </b></span><span id="main_temp"></span><span id="main_temp_unit"></span><br />
-        <span><b>Wind speed: </b></span><span id="wind_speed"></span> <span id="wind_speed_unit"></span><br />
-        <span><b>Wind direction: </b></span><span id="wind_direction"></span><span id="wind_degree_unit"></span><br />
-        <span><b>Current conditions: </b></span><span id="weather_conditions"></span>
     </body>
 
 
