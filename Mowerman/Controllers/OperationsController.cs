@@ -84,8 +84,8 @@ namespace Mowerman.Controllers
             var operation = _context.Operations.Where(c => c.IdentityUserId == userId).SingleOrDefault();
 
 
-
-            var applicationDbContext = _context.Customers.Where(c => c.ZipCode == operation.ZipCode);
+            var today = DateTime.Today.DayOfWeek;
+            var applicationDbContext = _context.Customers.Where(c => c.MowDay == today);
 
             return View(await applicationDbContext.ToListAsync());
 
@@ -506,6 +506,6 @@ namespace Mowerman.Controllers
         {
             return View("Location");
         }
-
+        
     }
 }
